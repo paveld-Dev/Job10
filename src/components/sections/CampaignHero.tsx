@@ -173,7 +173,9 @@ export const CampaignHero: React.FC<CampaignHeroProps> = ({
       </div>
 
       <div className="job10-hero-visual-content">
-        {/* 1. Eyebrow: — A SIMPLER WAY TO GET HIRED — */}
+        {/* Main hero stack centered vertically above steps card */}
+        <div className="job10-hero-main-stack">
+          {/* 1. Eyebrow: — A SIMPLER WAY TO GET HIRED — */}
         <div className="job10-hero-eyebrow-container">
           <span className="job10-hero-eyebrow-line" aria-hidden="true" />
           <span className="job10-hero-eyebrow-text">A SIMPLER WAY TO GET HIRED</span>
@@ -378,6 +380,7 @@ export const CampaignHero: React.FC<CampaignHeroProps> = ({
             </div>
           )}
         </div>
+      </div>
 
         {/* 6. The 3-Step Process Card (exact design from image) */}
         <div className="job10-hero-steps-card" aria-label="How it works overview">
