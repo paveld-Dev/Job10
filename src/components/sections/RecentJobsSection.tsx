@@ -209,7 +209,7 @@ export const RecentJobsSection: React.FC = () => {
                     href={`/campaign/get-started?audience=jobseeker&role=${encodeURIComponent(job.title)}`}
                     className="job10-job-details-btn"
                   >
-                    <span>Job Details</span>
+                    <span>Get Interview</span>
                   </a>
                 </div>
               </div>
