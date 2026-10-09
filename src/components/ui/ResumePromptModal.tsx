@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState, useId } from 'react';
-import { FileText, X, AlertCircle, ArrowRight } from 'lucide-react';
+import { FileText, X, AlertCircle, ArrowRight, UploadCloud, CheckCircle2 } from 'lucide-react';
 import { validateResumeFile, submitResumeHandoff } from '@/lib/resumeUpload';
 
 interface ResumePromptModalProps {
@@ -29,10 +29,10 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
   onFileSelect,
   uploadTargetHref = '/onboarding/jobseeker',
   config = {
-    title: 'Want job matches picked for you?',
-    body: 'Optional: upload your resume to discover opportunities matched to your skills.',
+    title: 'Find jobs that match your skills.',
+    body: 'Upload your resume to discover opportunities tailored to your experience.',
     uploadCtaText: 'Upload & Find Matches →',
-    skipCtaText: 'Skip, browse jobs',
+    skipCtaText: 'Browse Jobs Without Resume',
   },
   allowedExtensions = ['.pdf', '.docx', '.doc'],
   maxSizeBytes = 5 * 1024 * 1024,
@@ -49,7 +49,7 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
   const titleId = useId();
   const descId = useId();
 
-  // Focus trap and previous focus restoration
+  // Focus trap and accessibility management
   useEffect(() => {
     if (!isOpen) return;
 
@@ -59,12 +59,9 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
-    // Move focus into dialog on open
-    const focusable = modalRef.current?.querySelectorAll<HTMLElement>(
-      'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    );
-    if (focusable && focusable.length > 0) {
-      focusable[0].focus();
+    // Move initial focus to dialog container to avoid default ring on close button
+    if (modalRef.current) {
+      modalRef.current.focus();
     }
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -154,7 +151,14 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
 
   const handleUploadSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedFile || isUploading) return;
+
+    // If no file is selected yet, prompt the file picker directly!
+    if (!selectedFile) {
+      fileInputRef.current?.click();
+      return;
+    }
+
+    if (isUploading) return;
 
     const error = validateResumeFile(selectedFile, {
       allowedExtensions,
@@ -197,6 +201,7 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
         className="job10-resume-modal"
         ref={modalRef}
         role="dialog"
+        tabIndex={-1}
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={descId}
@@ -209,57 +214,31 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
           onClick={onClose}
           aria-label="Close dialog"
         >
-          <X size={18} aria-hidden="true" />
+          <X size={17} aria-hidden="true" />
         </button>
 
         {/* Modal Top Row: Graphic Avatar + Content */}
         <div className="job10-modal-header-row">
           <div className="job10-modal-icon-avatar" aria-hidden="true">
             <svg
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="job10-modal-doc-svg"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <rect width="36" height="36" rx="18" fill="transparent" />
-              {/* Document Outline */}
-              <path
-                d="M10 7C10 5.89543 10.8954 5 12 5H21L26 10V29C26 30.1046 25.1046 31 24 31H12C10.8954 31 10 30.1046 10 29V7Z"
-                stroke="#FFFFFF"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M21 5V10H26"
-                stroke="#FFFFFF"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              {/* Horizontal Document lines */}
-              <path
-                d="M14 16H22M14 20H18"
-                stroke="#FFFFFF"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              {/* Upload circle badge */}
-              <circle cx="23" cy="24" r="5" fill="#3B82F6" stroke="#FFFFFF" strokeWidth="1.8" />
-              <path
-                d="M23 26V22M21 24L23 22L25 24"
-                stroke="#FFFFFF"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="12" y1="18" x2="12" y2="12" />
+              <line x1="9" y1="15" x2="15" y2="15" />
             </svg>
           </div>
 
           <div className="job10-modal-header-text">
-            <div className="job10-modal-badge">Optional</div>
+            <span className="job10-modal-badge">Optional</span>
             <h2 id={titleId} className="job10-modal-title">
               {config.title}
             </h2>
@@ -300,33 +279,17 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
               }}
               aria-label="Drag and drop your resume here, or browse files"
             >
-              {/* Distinctive stylized upload cloud */}
-              <div className="job10-modal-cloud-icon" aria-hidden="true">
-                <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
-                  <path
-                    d="M14 34C10.6863 34 8 31.3137 8 28C8 24.9367 10.3 22.4137 13.3 22.05C14.1 16.35 19 12 25 12C31.5 12 36.8 17.1 37 23.6C39.8 24.3 42 26.9 42 30C42 33.3 39.3 36 36 36M24 24V38M24 24L18 30M24 24L30 30"
-                    stroke="url(#modalCloudGrad)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <defs>
-                    <linearGradient id="modalCloudGrad" x1="8" y1="12" x2="42" y2="38" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#38BDF8" />
-                      <stop offset="0.5" stopColor="#2563EB" />
-                      <stop offset="1" stopColor="#7C3AED" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+              {/* Elegant upload cloud icon bubble */}
+              <div className="job10-modal-cloud-bubble" aria-hidden="true">
+                <UploadCloud size={24} />
               </div>
 
               <div className="job10-modal-drop-title">
                 Drag &amp; drop your resume here
               </div>
 
-              <div className="job10-modal-browse-row">
-                <span className="job10-modal-or-text">or</span>
-                <span className="job10-modal-browse-pill">Browse files</span>
+              <div className="job10-modal-browse-sub">
+                or <span className="job10-modal-browse-highlight">browse files</span> from your computer
               </div>
 
               <div className="job10-modal-meta-text">
@@ -335,7 +298,10 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
             </div>
           ) : (
             <div className="job10-resume-selected-box job10-modal-selected-box">
-              <FileText size={22} className="job10-resume-file-icon" aria-hidden="true" />
+              <div className="job10-modal-file-icon-wrap" aria-hidden="true">
+                <FileText size={22} className="job10-resume-file-icon" />
+              </div>
+
               <div className="job10-resume-file-details">
                 <div className="job10-resume-file-header">
                   <span className="job10-resume-filename" title={selectedFile.name}>
@@ -344,9 +310,19 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
                   <span className="job10-resume-filesize">
                     ({(selectedFile.size / 1024).toFixed(0)} KB)
                   </span>
-                  <span className="job10-resume-status-badge">
-                    {isUploading ? `Uploading ${uploadProgress}%` : 'Selected'}
-                  </span>
+                </div>
+
+                <div className="job10-resume-status-line">
+                  {isUploading ? (
+                    <span className="job10-resume-status-badge is-uploading">
+                      Uploading {uploadProgress}%
+                    </span>
+                  ) : (
+                    <span className="job10-resume-status-badge is-ready">
+                      <CheckCircle2 size={13} aria-hidden="true" />
+                      Ready to match
+                    </span>
+                  )}
                 </div>
 
                 {isUploading && (
@@ -372,7 +348,7 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
                     className="job10-resume-action-replace"
                     onClick={() => fileInputRef.current?.click()}
                   >
-                    Replace
+                    Change
                   </button>
                   <button
                     type="button"
@@ -390,7 +366,7 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
           {/* Error Message with Retry */}
           {fileError && (
             <div className="job10-resume-error-bar" role="alert">
-              <AlertCircle size={14} className="job10-error-icon" />
+              <AlertCircle size={15} className="job10-error-icon" />
               <span className="job10-error-text">{fileError}</span>
               <button
                 type="button"
@@ -416,14 +392,21 @@ export const ResumePromptModal: React.FC<ResumePromptModalProps> = ({
           <button
             type="button"
             className="job10-modal-btn job10-modal-btn--primary"
-            disabled={!selectedFile || isUploading}
+            disabled={isUploading}
             onClick={handleUploadSubmit}
           >
-            <span>{isUploading ? 'Uploading...' : config.uploadCtaText}</span>
-            {!isUploading && <ArrowRight size={17} aria-hidden="true" />}
+            <span>
+              {isUploading
+                ? 'Uploading...'
+                : selectedFile
+                ? 'Find Matches Now'
+                : config.uploadCtaText}
+            </span>
+            {!isUploading && <ArrowRight size={16} aria-hidden="true" />}
           </button>
         </div>
       </div>
     </div>
   );
 };
+
