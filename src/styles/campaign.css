@@ -42,97 +42,47 @@
   box-sizing: border-box;
 }
 
-/* Sections below hero: 120px margin and 60px padding on left and right */
+/* Sections below hero: Full width container system eliminating artificial white margins */
 .job10-explore-section,
+.job10-recent-jobs-section,
 .job10-hiw-section,
-.job10-opportunities-section {
-  margin-left: 120px;
-  margin-right: 120px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
-  box-sizing: border-box;
-}
-
-/* Final CTA and Footer: Keep background / gradient fill full width edge-to-edge */
+.job10-opportunities-section,
 .job10-final-cta,
 .job10-footer {
   width: 100% !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
-  box-sizing: border-box;
-}
-
-/* Reset inner container padding so it aligns uniformly within the 60px section padding */
-section>.container-fluid,
-section>.job10-container-fluid,
-section>.container,
-section>.job10-container,
-.job10-footer>.container-fluid,
-.job10-footer>.container {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Standardized responsive inner content container */
+section > .job10-section-container,
+section > .container-fluid,
+section > .job10-container-fluid,
+section > .container,
+section > .job10-container,
+.job10-footer > .container-fluid,
+.job10-footer > .container {
   width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px, 3.5vw, 48px) !important;
+  padding-right: clamp(20px, 3.5vw, 48px) !important;
   box-sizing: border-box;
 }
 
-/* Header container matching 120px wrapper margin and 60px section padding */
+/* Header container matching full width with centered inner bounds */
 .job10-header-container {
-  margin-left: 120px;
-  margin-right: 120px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px, 3.5vw, 48px) !important;
+  padding-right: clamp(20px, 3.5vw, 48px) !important;
   box-sizing: border-box;
-  max-width: calc(100% - 240px) !important;
-  width: auto !important;
-}
-
-@media (max-width: 1440px) {
-
-  .job10-explore-section,
-  .job10-hiw-section,
-  .job10-opportunities-section,
-  .job10-header-container {
-    margin-left: 40px;
-    margin-right: 40px;
-    max-width: calc(100% - 80px) !important;
-  }
-}
-
-@media (max-width: 1024px) {
-
-  .job10-explore-section,
-  .job10-hiw-section,
-  .job10-opportunities-section,
-  .job10-header-container {
-    margin-left: 16px;
-    margin-right: 16px;
-    max-width: calc(100% - 32px) !important;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .job10-explore-section,
-  .job10-hiw-section,
-  .job10-opportunities-section,
-  .job10-final-cta,
-  .job10-footer {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .job10-header-container {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100% !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
 }
 
 /* ==========================================================================
@@ -1293,6 +1243,228 @@ section>.job10-container,
 }
 
 /* ==========================================================================
+   RECENT JOBS SECTION (MATCHING REFERENCE IMAGE 2)
+   ========================================================================== */
+.job10-recent-jobs-section {
+  width: 100%;
+  background-color: #f8fafc; /* very light color to show distinction */
+  padding: 84px 0;
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+  box-sizing: border-box;
+}
+
+.job10-recent-jobs-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 20px;
+}
+
+.job10-recent-jobs-title {
+  font-size: clamp(28px, 2.5vw, 36px);
+  font-weight: 800;
+  color: #0b1a3c;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px 0;
+}
+
+.job10-recent-jobs-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.job10-recent-jobs-view-all {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d9488;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.job10-recent-jobs-view-all:hover {
+  color: #0f766e;
+}
+
+.job10-recent-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.job10-recent-job-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  padding: 22px 28px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.job10-recent-job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.job10-job-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job10-job-time-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0d9488;
+  background-color: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  padding: 2px 10px;
+  border-radius: 9999px;
+}
+
+.job10-job-bookmark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #94a3b8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.job10-job-bookmark-btn:hover {
+  color: #0d9488;
+  background-color: #f0fdfa;
+}
+
+.job10-job-bookmark-btn.is-bookmarked {
+  color: #0d9488;
+}
+
+.job10-job-card-main-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.job10-job-logo-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job10-job-info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.job10-job-title {
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #0b1a3c;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.job10-job-company {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.job10-job-card-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.job10-job-meta-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.job10-job-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.job10-job-meta-icon {
+  color: #0d9488;
+  flex-shrink: 0;
+}
+
+.job10-job-details-btn {
+  height: 38px;
+  padding: 0 22px;
+  border-radius: 8px;
+  background-color: #0d9488;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.2);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.job10-job-details-btn:hover {
+  background-color: #0f766e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .job10-job-card-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .job10-job-details-btn {
+    width: 100%;
+  }
+
+  .job10-job-meta-group {
+    gap: 14px;
+  }
+}
+
+/* ==========================================================================
    HOW IT WORKS SECTION (SIMPLER, FASTER WAY TO GET HIRED)
    ========================================================================== */
 .job10-hiw-section {
@@ -1313,8 +1485,8 @@ section>.job10-container,
 
 .job10-hiw-layout {
   display: grid;
-  grid-template-columns: 1.05fr 1.35fr 1.15fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 56px;
   align-items: center;
 }
 
@@ -1345,7 +1517,7 @@ section>.job10-container,
   line-height: 1.6;
   color: #64748b;
   margin: 0 0 32px 0;
-  max-width: 360px;
+  max-width: 480px;
 }
 
 .job10-hiw-cta-btn {

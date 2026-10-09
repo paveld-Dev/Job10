@@ -18,10 +18,11 @@ export const defaultCampaignConfig: CampaignConfig = {
   sections: [
     { id: 'hero', component: 'CampaignHero', enabled: true, order: 1, variant: 'photographic' },
     { id: 'categories', component: 'CategoryBrowse', enabled: true, order: 2 },
-    { id: 'benefits', component: 'BenefitsSection', enabled: true, order: 3 },
-    { id: 'how-it-works', component: 'HowItWorks', enabled: true, order: 4 },
-    { id: 'final-cta', component: 'FinalCTA', enabled: true, order: 5 },
-    { id: 'footer', component: 'CampaignFooter', enabled: true, order: 6 },
+    { id: 'recent-jobs', component: 'RecentJobsSection', enabled: true, order: 3 },
+    { id: 'benefits', component: 'BenefitsSection', enabled: true, order: 4 },
+    { id: 'how-it-works', component: 'HowItWorks', enabled: true, order: 5 },
+    { id: 'final-cta', component: 'FinalCTA', enabled: true, order: 6 },
+    { id: 'footer', component: 'CampaignFooter', enabled: true, order: 7 },
   ],
 
   navigation: {

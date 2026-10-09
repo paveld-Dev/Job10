@@ -119,65 +119,6 @@ export const HowItWorks: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Column: 3 Connected Steps Card */}
-            <div className="job10-hiw-steps-col">
-              <div className="job10-hiw-steps-card">
-                
-                {/* STEP 1: Search Opportunities */}
-                <div className="job10-hiw-step-item">
-                  <div className="job10-hiw-step-icon-wrap job10-hiw-step-icon-wrap--blue">
-                    <Search size={20} className="job10-hiw-step-icon" />
-                  </div>
-                  <div className="job10-hiw-step-body">
-                    <span className="job10-hiw-step-tag">STEP 1</span>
-                    <h3 className="job10-hiw-step-heading">Search Opportunities</h3>
-                    <p className="job10-hiw-step-info">
-                      Explore thousands of verified jobs across industries, locations and work types that match your skills and goals.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Connecting Vertical Dashed Line */}
-                <div className="job10-hiw-step-connector" aria-hidden="true">
-                  <div className="job10-hiw-dashed-line" />
-                </div>
-
-                {/* STEP 2: Explore & Shortlist */}
-                <div className="job10-hiw-step-item">
-                  <div className="job10-hiw-step-icon-wrap job10-hiw-step-icon-wrap--purple">
-                    <Bookmark size={20} className="job10-hiw-step-icon" />
-                  </div>
-                  <div className="job10-hiw-step-body">
-                    <span className="job10-hiw-step-tag">STEP 2</span>
-                    <h3 className="job10-hiw-step-heading">Explore &amp; Shortlist</h3>
-                    <p className="job10-hiw-step-info">
-                      View detailed job information, compare roles and save the ones that interest you.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Connecting Vertical Dashed Line */}
-                <div className="job10-hiw-step-connector" aria-hidden="true">
-                  <div className="job10-hiw-dashed-line" />
-                </div>
-
-                {/* STEP 3: Apply & Track */}
-                <div className="job10-hiw-step-item">
-                  <div className="job10-hiw-step-icon-wrap job10-hiw-step-icon-wrap--teal">
-                    <Send size={20} className="job10-hiw-step-icon" />
-                  </div>
-                  <div className="job10-hiw-step-body">
-                    <span className="job10-hiw-step-tag">STEP 3</span>
-                    <h3 className="job10-hiw-step-heading">Apply &amp; Track</h3>
-                    <p className="job10-hiw-step-info">
-                      Apply in minutes and track your progress all in one place.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

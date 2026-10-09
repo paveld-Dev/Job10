@@ -8,12 +8,11 @@ import { CampaignHeader } from '@/components/layout/CampaignHeader';
 import { CampaignFooter } from '@/components/layout/CampaignFooter';
 import { CampaignHero } from '@/components/sections/CampaignHero';
 import { CategoryBrowse } from '@/components/sections/CategoryBrowse';
+import { RecentJobsSection } from '@/components/sections/RecentJobsSection';
 import { HowItWorks } from '@/components/sections/HowItWorks';
 import { BenefitsSection } from '@/components/sections/BenefitsSection';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 import { ResumePromptModal } from '@/components/ui/ResumePromptModal';
-
-const RESUME_MODAL_DISMISSED_KEY = 'job10_resume_prompt_dismissed';
 
 interface CampaignPageProps {
   customConfig?: Partial<CampaignConfig>;
@@ -25,48 +24,25 @@ export function CampaignPageView({ customConfig }: CampaignPageProps) {
   const [jobseekerMode, setJobseekerMode] = useState<JobseekerMode>('without-resume');
   const [selectedResumeFile, setSelectedResumeFile] = useState<File | null>(null);
 
-  // Resume entry prompt modal state
+  // Resume entry prompt modal state — shows on every reload
   const [isModalOpen, setIsModalOpen] = useState(false);
   const userInteractedRef = useRef(false);
-  const memoryDismissedRef = useRef(false);
 
   useEffect(() => {
     // Only for jobseeker audience, when feature flag enabled
     if (audience !== 'jobseeker') return;
     if (config.resumePrompt && !config.resumePrompt.enabled) return;
 
-    // Check localStorage (with try/catch fallback to in-memory)
-    let isDismissed = memoryDismissedRef.current;
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        isDismissed = isDismissed || window.localStorage.getItem(RESUME_MODAL_DISMISSED_KEY) === 'true';
-      }
-    } catch {
-      // In-memory fallback
-      isDismissed = memoryDismissedRef.current;
-    }
-
-    if (isDismissed) return;
-
+    // Show popup asking for resume on every reload after brief delay
     const timer = setTimeout(() => {
-      // Do not open if user has already started interacting with the page
-      if (userInteractedRef.current) return;
       setIsModalOpen(true);
-    }, 1500);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [audience, config.resumePrompt]);
 
   const handleDismissModal = () => {
     setIsModalOpen(false);
-    memoryDismissedRef.current = true;
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        window.localStorage.setItem(RESUME_MODAL_DISMISSED_KEY, 'true');
-      }
-    } catch {
-      // In-memory fallback
-    }
   };
 
   const handleUserInteracted = () => {
@@ -97,6 +73,8 @@ export function CampaignPageView({ customConfig }: CampaignPageProps) {
             categories={config.browseCategories}
           />
         );
+      case 'recent-jobs':
+        return <RecentJobsSection key="recent-jobs" />;
       case 'how-it-works':
         return <HowItWorks key="how-it-works" />;
       case 'benefits':
