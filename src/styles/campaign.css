@@ -818,8 +818,8 @@ section > .job10-container,
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-  margin-top: 64px;
-  margin-bottom: -108px;
+  margin-top: 96px;
+  margin-bottom: -140px;
 }
 
 .job10-steps-card-grid {
@@ -895,7 +895,7 @@ section > .job10-container,
 }
 
 .job10-explore-section {
-  padding: 172px 0 70px 0;
+  padding: 204px 0 70px 0;
   background: #ffffff;
   position: relative;
   z-index: 1;
@@ -2683,12 +2683,12 @@ section > .job10-container,
 
   .job10-hero-steps-card {
     padding: 24px 20px;
-    margin-top: 48px;
-    margin-bottom: -64px;
+    margin-top: 64px;
+    margin-bottom: -84px;
   }
 
   .job10-explore-section {
-    padding-top: 120px;
+    padding-top: 140px;
   }
 }
 
