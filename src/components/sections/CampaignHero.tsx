@@ -186,7 +186,7 @@ export const CampaignHero: React.FC<CampaignHeroProps> = ({
         <h1 className="job10-hero-visual-h1">
           <span className="job10-h1-row">Your next opportunity</span>
           <span className="job10-h1-row job10-h1-row--dial">
-            starts in{' '}
+            <span>starts in</span>
             <span className="job10-hero-clock-dial-wrap" aria-label="10 minutes">
               <svg
                 className="job10-hero-clock-dial-svg"

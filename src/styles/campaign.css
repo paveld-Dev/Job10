@@ -65,12 +65,12 @@
 }
 
 /* Reset inner container padding so it aligns uniformly within the 60px section padding */
-section > .container-fluid,
-section > .job10-container-fluid,
-section > .container,
-section > .job10-container,
-.job10-footer > .container-fluid,
-.job10-footer > .container {
+section>.container-fluid,
+section>.job10-container-fluid,
+section>.container,
+section>.job10-container,
+.job10-footer>.container-fluid,
+.job10-footer>.container {
   padding-left: 0 !important;
   padding-right: 0 !important;
   max-width: 100% !important;
@@ -90,6 +90,7 @@ section > .job10-container,
 }
 
 @media (max-width: 1440px) {
+
   .job10-explore-section,
   .job10-hiw-section,
   .job10-opportunities-section,
@@ -101,6 +102,7 @@ section > .job10-container,
 }
 
 @media (max-width: 1024px) {
+
   .job10-explore-section,
   .job10-hiw-section,
   .job10-opportunities-section,
@@ -112,6 +114,7 @@ section > .job10-container,
 }
 
 @media (max-width: 768px) {
+
   .job10-explore-section,
   .job10-hiw-section,
   .job10-opportunities-section,
@@ -309,10 +312,12 @@ section > .job10-container,
 }
 
 @media (max-width: 768px) {
+
   .job10-header-nav,
   .job10-header-actions-desktop {
     display: none;
   }
+
   .job10-header-actions-mobile {
     display: flex;
     align-items: center;
@@ -456,7 +461,7 @@ section > .job10-container,
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: clamp(20px, 3vh, 40px);
+  padding-top: clamp(16px, 2.5vh, 32px);
   padding-bottom: clamp(16px, 2.5vh, 32px);
 }
 
@@ -465,20 +470,20 @@ section > .job10-container,
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .job10-hero-eyebrow-line {
-  width: 32px;
+  width: 28px;
   height: 1.5px;
   background: #3b82f6;
   border-radius: 9999px;
 }
 
 .job10-hero-eyebrow-text {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #2563eb;
 }
@@ -486,16 +491,17 @@ section > .job10-container,
 /* 2. Headline */
 .job10-hero-visual-h1 {
   font-family: inherit;
-  font-size: clamp(44px, 4.8vw, 64px);
+  font-size: clamp(42px, 4.6vw, 62px);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.15;
   color: #0b1a3c;
-  margin: 0 0 20px 0;
+  margin: 0 0 16px 0;
   text-align: center;
   letter-spacing: -0.025em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2px;
 }
 
 .job10-h1-row {
@@ -507,7 +513,7 @@ section > .job10-container,
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 .job10-h1-gradient-text {
@@ -520,13 +526,13 @@ section > .job10-container,
 /* Clock Dial around '10' */
 .job10-hero-clock-dial-wrap {
   position: relative;
-  width: 76px;
-  height: 76px;
+  width: 72px;
+  height: 72px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  margin: 0 8px;
+  margin: 0;
 }
 
 .job10-hero-clock-dial-svg {
@@ -539,7 +545,7 @@ section > .job10-container,
 .job10-clock-dial-num {
   position: relative;
   z-index: 2;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 800;
   color: #0b1a3c;
   line-height: 1;
@@ -548,11 +554,11 @@ section > .job10-container,
 
 /* 3. Subtext */
 .job10-hero-visual-subtext {
-  font-size: clamp(17px, 1.25vw, 19px);
-  line-height: 1.6;
+  font-size: clamp(16.5px, 1.2vw, 18.5px);
+  line-height: 1.55;
   color: #475569;
-  max-width: 660px;
-  margin: 0 auto 30px auto;
+  max-width: 640px;
+  margin: 0 auto 22px auto;
   text-align: center;
   font-weight: 400;
 }
@@ -561,15 +567,15 @@ section > .job10-container,
 .job10-hero-cta-group {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 14px;
+  margin-bottom: 22px;
 }
 
 .job10-hero-pill-btn {
-  height: 52px;
-  padding: 0 32px;
+  height: 50px;
+  padding: 0 30px;
   border-radius: 9999px;
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 600;
   font-family: inherit;
   display: inline-flex;
@@ -616,8 +622,8 @@ section > .job10-container,
 /* 5. Search Container */
 .job10-hero-search-container {
   width: 100%;
-  max-width: 860px;
-  margin-bottom: 0;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 .job10-hero-search-box-wrap {
@@ -630,9 +636,9 @@ section > .job10-container,
   background-color: #ffffff;
   border: 1px solid #dbe3ee;
   border-radius: 9999px;
-  height: 64px;
+  height: 62px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  padding: 0 8px 0 22px;
+  padding: 0 6px 0 22px;
   width: 100%;
   box-sizing: border-box;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -652,8 +658,8 @@ section > .job10-container,
   display: flex;
   align-items: center;
   border-radius: 9999px;
-  padding: 0 8px;
-  height: 46px;
+  padding: 0 10px;
+  height: 44px;
   transition: box-shadow 0.15s ease;
 }
 
@@ -682,7 +688,7 @@ section > .job10-container,
   border: none;
   outline: none;
   background: transparent;
-  font-size: 15px;
+  font-size: 14.5px;
   color: #0b1a3c;
   font-family: inherit;
   font-weight: 500;
@@ -698,7 +704,7 @@ section > .job10-container,
   border: none;
   outline: none;
   background: transparent;
-  font-size: 15px;
+  font-size: 14.5px;
   color: #0b1a3c;
   font-family: inherit;
   font-weight: 500;
@@ -717,7 +723,7 @@ section > .job10-container,
   background-color: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 0 26px;
+  padding: 0 24px;
   font-size: 15px;
   font-weight: 600;
   font-family: inherit;
@@ -743,7 +749,7 @@ section > .job10-container,
 }
 
 .job10-hero-resume-row {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -757,7 +763,7 @@ section > .job10-container,
   align-items: center;
   gap: 7px;
   color: #64748b;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
@@ -783,15 +789,15 @@ section > .job10-container,
   background-color: #ffffff;
   border: 1px solid #dbe3ee;
   border-radius: 9999px;
-  height: 64px;
+  height: 62px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  padding: 0 10px 0 26px;
+  padding: 0 8px 0 24px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .job10-talent-text {
-  font-size: 15.5px;
+  font-size: 15px;
   font-weight: 600;
   color: #0b1a3c;
   margin: 0;
@@ -804,7 +810,7 @@ section > .job10-container,
   color: #ffffff;
   border: none;
   padding: 0 24px;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
   font-family: inherit;
   display: inline-flex;
@@ -833,8 +839,9 @@ section > .job10-container,
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: -115px;
+  flex-shrink: 0;
 }
 
 .job10-steps-card-grid {
@@ -1666,6 +1673,7 @@ section > .job10-container,
   .job10-hiw-card {
     padding: 44px 36px;
   }
+
   .job10-hiw-layout {
     gap: 28px;
   }
@@ -2080,7 +2088,10 @@ section > .job10-container,
    ACCESSIBILITY & REDUCED MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -2106,15 +2117,20 @@ section > .job10-container,
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .job10-resume-modal {
   position: relative;
   background: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.16), 0 1px 0 rgba(255,255,255,0.9) inset;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.16), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
   border: 1px solid var(--job10-border-light);
   width: 100%;
   max-width: 520px;
@@ -2127,8 +2143,15 @@ section > .job10-container,
 }
 
 @keyframes modalScaleUp {
-  0% { opacity: 0; transform: scale(0.95) translateY(8px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .job10-modal-close {
@@ -2416,6 +2439,7 @@ section > .job10-container,
 }
 
 @media (max-width: 768px) {
+
   .job10-nav-menu,
   .job10-nav-actions {
     display: none;
@@ -2446,8 +2470,15 @@ section > .job10-container,
   }
 
   @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .job10-mobile-nav-list {
@@ -2630,8 +2661,13 @@ section > .job10-container,
   }
 
   @keyframes slideUpMobile {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 
   .job10-modal-header-row {
@@ -2659,6 +2695,7 @@ section > .job10-container,
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
+
   .job10-modal-overlay,
   .job10-resume-modal {
     animation: none !important;
