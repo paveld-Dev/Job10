@@ -333,9 +333,10 @@ section > .job10-container,
   align-items: center;
   justify-content: flex-start;
   overflow: visible;
-  padding-top: 72px;
+  padding-top: clamp(40px, 5vh, 64px);
   padding-bottom: 0;
-  min-height: 820px;
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
 }
 
 /* Background image layer with two colleagues */
@@ -443,6 +444,7 @@ section > .job10-container,
   align-items: center;
   text-align: center;
   padding-inline: 20px;
+  flex: 1;
 }
 
 /* 1. Eyebrow */
@@ -818,8 +820,8 @@ section > .job10-container,
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-  margin-top: 96px;
-  margin-bottom: -140px;
+  margin-top: auto;
+  margin-bottom: -115px;
 }
 
 .job10-steps-card-grid {
@@ -895,7 +897,7 @@ section > .job10-container,
 }
 
 .job10-explore-section {
-  padding: 204px 0 70px 0;
+  padding: 180px 0 70px 0;
   background: #ffffff;
   position: relative;
   z-index: 1;
