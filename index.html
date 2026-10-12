@@ -514,9 +514,9 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: clamp(36px, 5vw, 68px);
+      gap: clamp(48px, 6vw, 84px);
     }
 
     .feature-media-wrap {
@@ -526,26 +526,161 @@
       justify-content: center;
     }
 
+    .feature-glow {
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(43, 59, 255, 0.14) 0%, rgba(99, 102, 241, 0.06) 50%, transparent 70%);
+      filter: blur(44px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .feature-image-card {
+      position: relative;
+      z-index: 2;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .feature-image-card:hover {
+      transform: translateY(-4px);
+    }
+
     .feature-media-wrap img {
       width: 100%;
       max-width: 460px;
       height: auto;
-      border-radius: var(--card-radius);
-      box-shadow: var(--shadow-lg);
+      display: block;
     }
 
+    /* Floating Badges */
+    .floating-card {
+      position: absolute;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 14px 20px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(43, 59, 255, 0.06);
+      transition: transform 0.25s ease;
+    }
+
+    .floating-card-top {
+      top: -16px;
+      left: -28px;
+      right: auto;
+      animation: floatCardTop 4.5s ease-in-out infinite;
+    }
+
+    .floating-card-bottom {
+      bottom: -16px;
+      right: -28px;
+      left: auto;
+      animation: floatCardBottom 5s ease-in-out infinite;
+    }
+
+    @keyframes floatCardTop {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes floatCardBottom {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .floating-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 4px;
+    }
+
+    .pulse-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #22c55e;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+
+    .floating-card-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .floating-card-meta {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .floating-card-salary {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 3px;
+    }
+
+    .salary-badge {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2b3bff;
+    }
+
+    .salary-type {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Feature Content */
     .feature-content {
       max-width: 580px;
     }
 
     .feature-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 18px;
       font-weight: 800;
       color: var(--primary);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+      background-color: rgba(43, 59, 255, 0.08);
+      border: 1.5px solid rgba(43, 59, 255, 0.18);
+      padding: 6px 18px;
+      border-radius: var(--pill-radius);
+      margin-bottom: 18px;
     }
 
     .feature-headline {
@@ -554,7 +689,7 @@
       line-height: 1.22;
       color: var(--navy);
       letter-spacing: -0.025em;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .feature-desc {
@@ -565,36 +700,65 @@
     }
 
     .feature-list {
-      list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      margin-bottom: 38px;
+      gap: 16px;
+      margin: 0 0 38px 0;
+      padding: 0;
     }
 
-    .feature-list-item {
+    .feature-pillar {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
-      font-size: 18px;
-      line-height: 1.55;
-      color: var(--text-body);
-      font-weight: 600;
+      gap: 18px;
+      padding: 18px 22px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .feature-check-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background-color: #eff2ff;
+    .feature-pillar:hover {
+      border-color: rgba(43, 59, 255, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(43, 59, 255, 0.09);
+    }
+
+    .feature-icon-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background-color: var(--primary-light);
       color: var(--primary);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
-      font-size: 14px;
+      transition: transform 0.2s ease;
+    }
+
+    .feature-pillar:hover .feature-icon-badge {
+      transform: scale(1.08);
+    }
+
+    .feature-pillar-content {
+      flex: 1;
+    }
+
+    .feature-pillar-title {
+      font-size: 20px;
       font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 4px 0;
+      letter-spacing: -0.015em;
+    }
+
+    .feature-pillar-desc {
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin: 0;
     }
 
     /* ==========================================================================
@@ -762,12 +926,26 @@
         text-align: center;
       }
 
+      .feature-media-wrap {
+        margin-bottom: 32px;
+      }
+
+      .floating-card-top {
+        top: -10px;
+        right: 0;
+      }
+
+      .floating-card-bottom {
+        bottom: -10px;
+        left: 0;
+      }
+
       .feature-content {
         max-width: 100%;
       }
 
-      .feature-list {
-        align-items: center;
+      .feature-pillar {
+        text-align: left;
       }
 
       .cta-card-inner {
@@ -866,11 +1044,10 @@
             </div>
 
             <h1 class="hero-headline">
-              Your next<br />
-              career move<br />
-              starts in<br />
+              Get an interview<br />
+              within
               <span class="highlight">
-                <span class="highlight-underline">10</span> minutes.
+                <span class="highlight-underline">10</span> minutes!
               </span>
             </h1>
 
@@ -973,36 +1150,85 @@
     <section class="feature-section" id="jobseekers">
       <div class="container">
         <div class="feature-grid">
-          <!-- Left Media Asset -->
+          <!-- Left Media Asset with Floating Badges -->
           <div class="feature-media-wrap">
-            <img src="images/feature-recruiter-card.png" alt="Professional engineer exploring tailored roles" />
+            <div class="feature-glow" aria-hidden="true"></div>
+
+            <div class="feature-image-card">
+              <img src="images/feature-recruiter-card.png" alt="Professional engineer exploring tailored roles" class="feature-media-img" width="460" height="460" />
+            </div>
+
+            <!-- Top Floating Match Card -->
+            <div class="floating-card floating-card-top">
+              <div class="floating-card-badge">
+                <span class="pulse-dot"></span>
+                <span>98% Compatibility</span>
+              </div>
+              <div class="floating-card-title">Senior Software Engineer</div>
+              <div class="floating-card-meta">Verified Direct Match &middot; Active Hiring</div>
+            </div>
+
+            <!-- Bottom Floating Salary Card -->
+            <div class="floating-card floating-card-bottom">
+              <div class="floating-card-salary">
+                <span class="salary-badge">$150K &ndash; $185K</span>
+                <span class="salary-type">/ year</span>
+              </div>
+              <div class="floating-card-meta">100% Remote &middot; Full Equity Package</div>
+            </div>
           </div>
 
           <!-- Right Content -->
           <div class="feature-content">
-            <span class="feature-eyebrow">FOR JOBSEEKERS</span>
+            <span class="feature-eyebrow">
+              <span>✦</span> FOR JOBSEEKERS
+            </span>
             <h2 class="feature-headline">Land roles tailored to your unique skills.</h2>
             <p class="feature-desc">
               Create your profile, upload your resume or browse directly to receive instant, AI-matched roles from top verified companies &mdash; all in minutes.
             </p>
 
-            <ul class="feature-list">
-              <li class="feature-list-item">
-                <span class="feature-check-icon">✓</span>
-                Instant AI resume parsing with zero manual entry
-              </li>
-              <li class="feature-list-item">
-                <span class="feature-check-icon">✓</span>
-                100% upfront salary transparency and remote indicators
-              </li>
-              <li class="feature-list-item">
-                <span class="feature-check-icon">✓</span>
-                Direct communication channels with engineering and hiring leads
-              </li>
-            </ul>
+            <div class="feature-list">
+              <div class="feature-pillar">
+                <div class="feature-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <div class="feature-pillar-content">
+                  <h3 class="feature-pillar-title">Instant AI Resume Matching</h3>
+                  <p class="feature-pillar-desc">Zero manual entry &mdash; intelligent parsing maps your capabilities directly to open positions.</p>
+                </div>
+              </div>
+
+              <div class="feature-pillar">
+                <div class="feature-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                  </svg>
+                </div>
+                <div class="feature-pillar-content">
+                  <h3 class="feature-pillar-title">100% Upfront Salary Transparency</h3>
+                  <p class="feature-pillar-desc">No guesswork. View exact compensation benchmarks, verified equity, and remote policies upfront.</p>
+                </div>
+              </div>
+
+              <div class="feature-pillar">
+                <div class="feature-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z" />
+                  </svg>
+                </div>
+                <div class="feature-pillar-content">
+                  <h3 class="feature-pillar-title">Direct Hiring Manager Channels</h3>
+                  <p class="feature-pillar-desc">Skip application black holes and start conversations directly with vetted tech leaders.</p>
+                </div>
+              </div>
+            </div>
 
             <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" id="feature-find-jobs-btn">
-              Find Jobs &rarr;
+              <span>Find Jobs Now</span>
+              <span class="btn-arrow">&rarr;</span>
             </a>
           </div>
         </div>

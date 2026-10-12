@@ -21,11 +21,10 @@ export const JobseekerPromoHero: React.FC = () => {
             </div>
 
             <h1 className={styles.heroHeadline}>
-              Your next<br />
-              career move<br />
-              starts in<br />
+              Get an interview<br />
+              within{' '}
               <span className={styles.highlight}>
-                <span className={styles.highlightUnderline}>10</span> minutes.
+                <span className={styles.highlightUnderline}>10</span> minutes!
               </span>
             </h1>
 
