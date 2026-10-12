@@ -46,7 +46,8 @@ export const JobseekerPromoHeader: React.FC = () => {
               style={{ height: '40px', padding: '0 22px', fontSize: '13.5px' }}
               id="header-cta-btn"
             >
-              Explore Jobs Now &rarr;
+              <span>Explore Jobs Now</span>
+              <span className={styles.btnArrow}>&rarr;</span>
             </a>
           </div>
         </div>

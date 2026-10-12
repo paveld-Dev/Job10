@@ -39,7 +39,8 @@ export const JobseekerPromoHero: React.FC = () => {
                 className={`${styles.btn} ${styles.btnPrimary}`}
                 id="hero-primary-cta"
               >
-                Explore Jobs Now &rarr;
+                <span>Explore Jobs Now</span>
+                <span className={styles.btnArrow}>&rarr;</span>
               </a>
               <a
                 href="#benefits"
