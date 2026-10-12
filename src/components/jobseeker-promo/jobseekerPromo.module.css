@@ -1,0 +1,627 @@
+/* ==========================================================================
+   JOBSEEKER PROMOTIONAL LANDING PAGE (CSS MODULE)
+   ========================================================================== */
+
+.pageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  color: #0b1a3c;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   SECTION 01: HEADER
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #edf2f7;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.9;
+}
+
+.headerCtaBtn {
+  height: 42px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  background-color: #2b3bff;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.headerCtaBtn:hover {
+  background-color: #1e2ecc;
+  transform: translateY(-1px);
+}
+
+.headerCtaBtn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECTION 02: HERO
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding-top: clamp(48px, 6vw, 76px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBgImageWrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroBgImage {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.9) 55%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroEyebrowWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.heroEyebrowLine {
+  width: 26px;
+  height: 2px;
+  background-color: #2b3bff;
+  border-radius: 9999px;
+}
+
+.heroEyebrowText {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b3bff;
+}
+
+.heroHeadline {
+  font-size: clamp(38px, 4.4vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0b1a3c;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.025em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.heroHeadlineRow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.heroClockDial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.heroDescription {
+  font-size: clamp(16px, 1.3vw, 18.5px);
+  line-height: 1.6;
+  color: #475569;
+  max-width: 620px;
+  margin: 0 auto 32px auto;
+  font-weight: 400;
+}
+
+.heroCtaBtn {
+  height: 52px;
+  padding: 0 36px;
+  border-radius: 9999px;
+  background-color: #2b3bff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.heroCtaBtn:hover {
+  background-color: #1e2ecc;
+  transform: translateY(-2px);
+}
+
+.heroCtaBtn:active {
+  transform: translateY(0);
+}
+
+.ctaArrow {
+  transition: transform 0.15s ease;
+}
+
+.heroCtaBtn:hover .ctaArrow,
+.headerCtaBtn:hover .ctaArrow,
+.featureCtaBtn:hover .ctaArrow,
+.finalCtaBtn:hover .ctaArrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   SECTION 03: WHY JOB10 (HIGHLIGHTS STRIP)
+   ========================================================================== */
+.highlightsSection {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: clamp(40px, 6vw, 64px);
+  background-color: #ffffff;
+}
+
+.highlightsCard {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.highlightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 24px;
+  position: relative;
+}
+
+.highlightCol:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: #edf2f7;
+}
+
+.highlightIconBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eff2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: #2b3bff;
+  transition: transform 0.2s ease;
+}
+
+.highlightCol:hover .highlightIconBadge {
+  transform: scale(1.08);
+}
+
+.highlightValue {
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.highlightLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SECTION 04: FOR JOBSEEKERS BLOCK
+   ========================================================================== */
+.featureSection {
+  width: 100%;
+  padding-top: clamp(20px, 4vw, 36px);
+  padding-bottom: clamp(48px, 7vw, 76px);
+  background-color: #ffffff;
+}
+
+.featureCard {
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 28px;
+  padding: clamp(32px, 4vw, 48px);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: clamp(36px, 4.5vw, 64px);
+  align-items: center;
+}
+
+.featureImageCol {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureImageWrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.featureImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.featureTextCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.featureBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #eff2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #2b3bff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.featureBadgeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b3bff;
+}
+
+.featureHeadline {
+  font-size: clamp(28px, 2.8vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0b1a3c;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.featureDescription {
+  font-size: clamp(15px, 1.15vw, 16.5px);
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 28px 0;
+  max-width: 580px;
+}
+
+.featureCtaBtn {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 9999px;
+  background-color: #2b3bff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.featureCtaBtn:hover {
+  background-color: #1e2ecc;
+  transform: translateY(-2px);
+}
+
+.featureCtaBtn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECTION 05: FINAL CTA
+   ========================================================================== */
+.finalCtaSection {
+  width: 100%;
+  padding-top: clamp(16px, 3vw, 24px);
+  padding-bottom: clamp(64px, 8vw, 96px);
+  background-color: #ffffff;
+}
+
+.finalCtaCard {
+  background-color: #eff2ff;
+  border: 1px solid #dce4ff;
+  border-radius: 28px;
+  padding: clamp(44px, 6vw, 68px) clamp(24px, 4vw, 48px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finalCtaHeadline {
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0b1a3c;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
+}
+
+.finalCtaDescription {
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.6;
+  color: #475569;
+  max-width: 540px;
+  margin: 0 auto 32px auto;
+}
+
+.finalCtaBtn {
+  height: 52px;
+  padding: 0 38px;
+  border-radius: 9999px;
+  background-color: #2b3bff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.finalCtaBtn:hover {
+  background-color: #1e2ecc;
+  transform: translateY(-2px);
+}
+
+.finalCtaBtn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECTION 06: FOOTER
+   ========================================================================== */
+.footer {
+  width: 100%;
+  border-top: 1px solid #edf2f7;
+  padding-top: 40px;
+  padding-bottom: 48px;
+  background-color: #ffffff;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.footerLogoLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footerLinksNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footerLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footerLink:hover {
+  color: #2b3bff;
+  text-decoration: underline;
+}
+
+.footerCopyright {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .featureCard {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .featureTextCol {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureImageWrap {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .highlightCol:not(:last-child)::after {
+    display: none;
+  }
+
+  .highlightCol:not(:last-child) {
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 24px;
+  }
+
+  .featureCard {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .finalCtaCard {
+    padding: 36px 20px;
+    border-radius: 20px;
+  }
+
+  .footerLinksNav {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerCtaBtn {
+    height: 38px;
+    padding: 0 18px;
+    font-size: 13.5px;
+  }
+
+  .heroCtaBtn,
+  .featureCtaBtn,
+  .finalCtaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
