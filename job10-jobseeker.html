@@ -209,16 +209,16 @@
     }
 
     .header-inner {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      justify-content: space-between;
       width: 100%;
     }
 
     .header-left {
       display: flex;
       align-items: center;
-      gap: 48px;
+      justify-content: flex-start;
     }
 
     .header-logo img {
@@ -226,9 +226,16 @@
       height: auto;
     }
 
+    .header-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 32px;
       list-style: none;
     }
@@ -238,6 +245,7 @@
       font-weight: 600;
       color: var(--text-body);
       transition: color 0.15s ease;
+      white-space: nowrap;
     }
 
     .nav-link:hover {
@@ -247,6 +255,7 @@
     .header-right {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 20px;
     }
 
@@ -767,7 +776,16 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header-center {
+        display: none;
+      }
+
       .nav-links {
         display: none;
       }
@@ -798,15 +816,15 @@
           <a href="#" class="header-logo" aria-label="Job10 Home">
             <img src="images/job10-logo.png" alt="Job10" width="132" height="36" />
           </a>
-          <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-              <li><a href="#benefits" class="nav-link">How It Works</a></li>
-              <li><a href="#jobseekers" class="nav-link">For Jobseekers</a></li>
-              <li><a href="#jobseekers" class="nav-link">Browse Jobs</a></li>
-              <li><a href="#cta" class="nav-link">Get Started</a></li>
-            </ul>
-          </nav>
         </div>
+        <nav aria-label="Main Navigation" class="header-center">
+          <ul class="nav-links">
+            <li><a href="#benefits" class="nav-link">How It Works</a></li>
+            <li><a href="#jobseekers" class="nav-link">For Jobseekers</a></li>
+            <li><a href="#jobseekers" class="nav-link">Browse Jobs</a></li>
+            <li><a href="#cta" class="nav-link">Get Started</a></li>
+          </ul>
+        </nav>
         <div class="header-right">
           <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" style="height: 50px; padding: 0 28px; font-size: 18px;" id="header-cta-btn">
             <span>Explore Jobs Now</span>

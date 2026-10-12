@@ -30,15 +30,15 @@ export const JobseekerPromoHeader: React.FC = () => {
                 style={{ width: '132px', height: 'auto', display: 'block' }}
               />
             </a>
-            <nav aria-label="Main Navigation">
-              <ul className={styles.navLinks}>
-                <li><a href="#benefits" className={styles.navLink}>How It Works</a></li>
-                <li><a href="#jobseekers" className={styles.navLink}>For Jobseekers</a></li>
-                <li><a href="#jobseekers" className={styles.navLink}>Browse Jobs</a></li>
-                <li><a href="#cta" className={styles.navLink}>Get Started</a></li>
-              </ul>
-            </nav>
           </div>
+          <nav aria-label="Main Navigation" className={styles.headerCenter}>
+            <ul className={styles.navLinks}>
+              <li><a href="#benefits" className={styles.navLink}>How It Works</a></li>
+              <li><a href="#jobseekers" className={styles.navLink}>For Jobseekers</a></li>
+              <li><a href="#jobseekers" className={styles.navLink}>Browse Jobs</a></li>
+              <li><a href="#cta" className={styles.navLink}>Get Started</a></li>
+            </ul>
+          </nav>
           <div className={styles.headerRight}>
             <a
               href="https://job10-delta.vercel.app/?audience=jobseeker"
