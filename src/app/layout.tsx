@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://job10-delta.vercel.app'),
   title: 'Job10 — Your Next Opportunity Starts in 10 Minutes',
   description:
     'Find opportunities that match your skills or discover talent that fits your team. AI-powered matching connecting qualified candidates with top companies faster.',

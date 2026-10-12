@@ -2,58 +2,53 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { jobseekerPromoConfig } from '@/config/jobseekerPromo.config';
 import styles from './jobseekerPromo.module.css';
 
 export const JobseekerPromoFeature: React.FC = () => {
-  const { feature, redirectUrls } = jobseekerPromoConfig;
-
   return (
-    <section className={styles.featureSection}>
+    <section className={styles.featureSection} id="jobseekers">
       <div className={styles.container}>
-        <div className={styles.featureCard}>
-          {/* Left Column: Image with Decorative Backdrop & Dot Matrix */}
-          <div className={styles.featureImageCol}>
-            <div className={styles.featureImageWrap}>
-              <Image
-                src={feature.imageSrc}
-                alt={feature.imageAlt}
-                width={420}
-                height={430}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-                priority
-              />
-            </div>
+        <div className={styles.featureGrid}>
+          {/* Left Media Asset */}
+          <div className={styles.featureMediaWrap}>
+            <Image
+              src="/images/feature-recruiter-card.png"
+              alt="Professional engineer exploring tailored roles"
+              width={440}
+              height={440}
+              className={styles.featureMediaImg}
+            />
           </div>
 
-          {/* Right Column: Copy & CTA */}
-          <div className={styles.featureTextCol}>
-            {/* Audience Badge Pill */}
-            <div className={styles.featureBadge}>
-              <span className={styles.featureBadgeIcon}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="#2b3bff" aria-hidden="true">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
-              </span>
-              <span>{feature.badge}</span>
-            </div>
-
-            {/* Headline */}
-            <h2 className={styles.featureHeadline}>
-              {feature.headline}
-            </h2>
-
-            {/* Description */}
-            <p className={styles.featureDescription}>
-              {feature.description}
+          {/* Right Content */}
+          <div className={styles.featureContent}>
+            <span className={styles.featureEyebrow}>FOR JOBSEEKERS</span>
+            <h2 className={styles.featureHeadline}>Land roles tailored to your unique skills.</h2>
+            <p className={styles.featureDesc}>
+              Create your profile, upload your resume or browse directly to receive instant, AI-matched roles from top verified companies &mdash; all in minutes.
             </p>
 
-            {/* Action CTA Button */}
+            <ul className={styles.featureList}>
+              <li className={styles.featureListItem}>
+                <span className={styles.featureCheckIcon}>✓</span>
+                Instant AI resume parsing with zero manual entry
+              </li>
+              <li className={styles.featureListItem}>
+                <span className={styles.featureCheckIcon}>✓</span>
+                100% upfront salary transparency and remote indicators
+              </li>
+              <li className={styles.featureListItem}>
+                <span className={styles.featureCheckIcon}>✓</span>
+                Direct communication channels with engineering and hiring leads
+              </li>
+            </ul>
+
             <a
-              href={redirectUrls.featureCta}
-              className={styles.featureCtaBtn}
+              href="https://job10-delta.vercel.app/?audience=jobseeker"
+              className={`${styles.btn} ${styles.btnPrimary}`}
+              id="feature-find-jobs-btn"
             >
-              <span>{feature.ctaLabel}</span>
+              Find Jobs &rarr;
             </a>
           </div>
         </div>

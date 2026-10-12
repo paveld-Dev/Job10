@@ -1,28 +1,28 @@
 'use client';
 
 import React from 'react';
-import { jobseekerPromoConfig } from '@/config/jobseekerPromo.config';
 import styles from './jobseekerPromo.module.css';
 
 export const JobseekerPromoFinalCTA: React.FC = () => {
-  const { finalCta, redirectUrls } = jobseekerPromoConfig;
-
   return (
-    <section className={styles.finalCtaSection}>
+    <section className={styles.ctaSection} id="cta">
       <div className={styles.container}>
-        <div className={styles.finalCtaCard}>
-          <h2 className={styles.finalCtaHeadline}>
-            {finalCta.headline}
-          </h2>
-          <p className={styles.finalCtaDescription}>
-            {finalCta.description}
-          </p>
-          <a
-            href={redirectUrls.finalCta}
-            className={styles.finalCtaBtn}
-          >
-            <span>{finalCta.ctaLabel}</span>
-          </a>
+        <div className={styles.ctaCard}>
+          <div className={styles.ctaCardInner}>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaHeadline}>Your next opportunity could be one click away.</h2>
+              <p className={styles.ctaDesc}>
+                Join thousands of professionals finding matched roles and advancing their careers faster today.
+              </p>
+              <a
+                href="https://job10-delta.vercel.app/?audience=jobseeker"
+                className={`${styles.btn} ${styles.btnWhite}`}
+                id="final-cta-btn"
+              >
+                Find My Match &rarr;
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

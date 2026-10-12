@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job10 — Your Next Career Move Starts in 10 Minutes</title>
+  <meta name="description" content="Skip application black holes. Job10 connects you directly with top verified companies through intelligent AI skill matching in just 10 minutes." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & RESET
+       ========================================================================== */
+    :root {
+      --primary: #2b3bff;
+      --primary-hover: #1e2ecc;
+      --primary-light: #eff2ff;
+      --primary-glow: rgba(43, 59, 255, 0.35);
+      --navy: #0b1a3c;
+      --text-muted: #64748b;
+      --text-body: #334155;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border-subtle: #e2e8f0;
+      --card-radius: 20px;
+      --pill-radius: 9999px;
+      --container-max: 1200px;
+      --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: #f8fafc;
+      color: var(--navy);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(20px, 4vw, 40px);
+      padding-right: clamp(20px, 4vw, 40px);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: var(--pill-radius);
+      padding: 0 28px;
+      height: 48px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 6px 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(43, 59, 255, 0.45);
+    }
+
+    .btn-white {
+      background-color: #ffffff;
+      color: var(--navy);
+      box-shadow: 0 6px 20px rgba(11, 26, 60, 0.25);
+    }
+
+    .btn-white:hover {
+      background-color: #f8fafc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(11, 26, 60, 0.35);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--border-subtle);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--bg-light);
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 7px 16px;
+      border-radius: var(--pill-radius);
+    }
+
+    .badge-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       SECTION 01: HEADER / NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      z-index: 100;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .header-logo img {
+      width: 132px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-body);
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--primary-light);
+      padding: 6px 14px;
+      border-radius: var(--pill-radius);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ==========================================================================
+       SECTION 02: HERO SECTION (WITH COMBINED FADE EFFECT)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background-color: #ffffff;
+      padding-top: clamp(40px, 5vw, 64px);
+      padding-bottom: clamp(48px, 6vw, 76px);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: clamp(24px, 4vw, 56px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-headline {
+      font-size: clamp(38px, 4.4vw, 58px);
+      font-weight: 800;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      margin: 18px 0 20px 0;
+    }
+
+    .hero-headline .highlight {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-headline .highlight-underline {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-headline .highlight-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 4px;
+      width: 100%;
+      height: 4px;
+      background-color: #93c5fd;
+      border-radius: 2px;
+    }
+
+    .hero-subhead {
+      font-size: clamp(15.5px, 1.3vw, 17px);
+      line-height: 1.65;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .proof-avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .proof-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      background-color: #cbd5e1;
+      margin-left: -8px;
+      object-fit: cover;
+    }
+
+    .proof-avatar:first-child {
+      margin-left: 0;
+    }
+
+    .proof-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .proof-text strong {
+      color: var(--navy);
+    }
+
+    /* Hero Media with Seamless Fade Effect */
+    .hero-media-wrap {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .hero-media-wrap img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      display: block;
+      /* Soft seamless fade blends with white canvas */
+      filter: drop-shadow(0 12px 28px rgba(15, 23, 42, 0.04));
+    }
+
+    /* ==========================================================================
+       SECTION 03: BENEFIT VALUE CARDS (BORDERLESS, ROUNDED)
+       ========================================================================== */
+    .benefits-section {
+      padding-top: clamp(48px, 6vw, 76px);
+      padding-bottom: clamp(48px, 6vw, 76px);
+      background-color: #ffffff;
+    }
+
+    .benefits-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto clamp(36px, 5vw, 48px) auto;
+    }
+
+    .benefits-header h2 {
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      margin-top: 12px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background-color: var(--bg-light);
+      border-radius: var(--card-radius);
+      padding: clamp(28px, 3.5vw, 36px) 24px;
+      text-align: center;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+    }
+
+    .benefit-card:hover {
+      background-color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-subtle);
+    }
+
+    .benefit-icon-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      transition: transform 0.2s ease;
+    }
+
+    .benefit-card:hover .benefit-icon-badge {
+      transform: scale(1.08);
+    }
+
+    .benefit-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .benefit-subtitle {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 04: FEATURE SPOTLIGHT (FOR JOBSEEKERS)
+       ========================================================================== */
+    .feature-section {
+      padding-top: clamp(48px, 6vw, 84px);
+      padding-bottom: clamp(56px, 7vw, 96px);
+      background-color: #f8fafc;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: clamp(32px, 5vw, 64px);
+    }
+
+    .feature-media-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-media-wrap img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-content {
+      max-width: 540px;
+    }
+
+    .feature-eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .feature-headline {
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--navy);
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+
+    .feature-desc {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .feature-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--text-body);
+      font-weight: 600;
+    }
+
+    .feature-check-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #eff2ff;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       SECTION 05: FINAL CTA BANNER (SEAMLESS CARD WITH WOMAN)
+       ========================================================================== */
+    .cta-section {
+      padding-top: clamp(48px, 6vw, 84px);
+      padding-bottom: clamp(64px, 8vw, 100px);
+      background-color: #ffffff;
+    }
+
+    .cta-card {
+      position: relative;
+      background-color: #1d2de8;
+      background-image: url('images/cta-card-bg.jpg');
+      background-size: cover;
+      background-position: right top;
+      background-repeat: no-repeat;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(43, 59, 255, 0.28);
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+    }
+
+    .cta-card-inner {
+      width: 100%;
+      padding: clamp(36px, 5vw, 56px) clamp(28px, 4vw, 56px);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+
+    .cta-content {
+      max-width: 520px;
+    }
+
+    .cta-headline {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #ffffff;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+
+    .cta-desc {
+      font-size: clamp(14.5px, 1.2vw, 16.5px);
+      line-height: 1.6;
+      color: #e0e7ff;
+      margin-bottom: 28px;
+      max-width: 460px;
+    }
+
+    /* ==========================================================================
+       SECTION 06: FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #ffffff;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: clamp(44px, 5vw, 64px);
+      padding-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-top: 14px;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-legal-links a:hover {
+      color: var(--primary);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 991px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-subhead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-social-proof {
+        justify-content: center;
+      }
+
+      .hero-media-wrap {
+        justify-content: center;
+        margin-top: 24px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .feature-content {
+        max-width: 100%;
+      }
+
+      .feature-list {
+        align-items: center;
+      }
+
+      .cta-card-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .cta-card {
+        background-position: right top;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .header-pill {
+        display: none;
+      }
+
+      .cta-card {
+        background-position: 80% top;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="#" class="header-logo" aria-label="Job10 Home">
+            <img src="images/job10-logo.png" alt="Job10" width="132" height="36" />
+          </a>
+          <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+              <li><a href="#benefits" class="nav-link">How It Works</a></li>
+              <li><a href="#jobseekers" class="nav-link">For Jobseekers</a></li>
+              <li><a href="#jobseekers" class="nav-link">Browse Jobs</a></li>
+              <li><a href="#cta" class="nav-link">Get Started</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right">
+          <span class="header-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#2b3bff" style="display:block;">
+              <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+            </svg>
+            Talent Matches Faster
+          </span>
+          <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" style="height: 40px; padding: 0 22px; font-size: 13.5px;" id="header-cta-btn">
+            Explore Jobs Now &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION (FEATURING COMBINED SOFT FADE)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Live Content -->
+          <div class="hero-content">
+            <div class="badge">
+              <span class="badge-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#2b3bff">
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                </svg>
+              </span>
+              Talent Matches Faster
+            </div>
+
+            <h1 class="hero-headline">
+              Your next<br />
+              career move<br />
+              starts in<br />
+              <span class="highlight">
+                <span class="highlight-underline">10</span> minutes.
+              </span>
+            </h1>
+
+            <p class="hero-subhead">
+              Skip application black holes. Job10 connects you directly with top verified companies through intelligent AI skill matching &mdash; so you can take the next step in your career in just 10 minutes.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" id="hero-primary-cta">
+                Explore Jobs Now &rarr;
+              </a>
+              <a href="#benefits" class="btn btn-outline" id="hero-secondary-cta">
+                How It Works
+              </a>
+            </div>
+
+            <div class="hero-social-proof">
+              <div class="proof-avatars">
+                <img src="images/explore-man.jpg" alt="User" class="proof-avatar" />
+                <img src="images/explore-woman.jpg" alt="User" class="proof-avatar" />
+                <img src="images/hero-woman.jpg" alt="User" class="proof-avatar" />
+              </div>
+              <div class="proof-text">
+                Matched <strong>15,000+ candidates</strong> with top tier tech teams &middot; ★ 4.9/5
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Woman with Seamless Radial/Horizontal Fade -->
+          <div class="hero-media-wrap">
+            <img src="images/hero-woman-asset.jpg" alt="Professional woman discovering career opportunities" id="hero-faded-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. BENEFITS SECTION (3 VALUE CARDS)
+         ========================================================================== -->
+    <section class="benefits-section" id="benefits">
+      <div class="container">
+        <div class="benefits-header">
+          <div class="badge">
+            <span class="badge-icon">✦</span>
+            Why Choose Job10
+          </div>
+          <h2>Accelerate your career search with zero friction</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <!-- Card 1: 10 Min -->
+          <div class="benefit-card">
+            <div class="benefit-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+              </svg>
+            </div>
+            <div class="benefit-title">10 Min</div>
+            <div class="benefit-subtitle">Match Velocity</div>
+            <p class="benefit-desc">
+              Direct algorithmic screening connects you with verified hiring managers in minutes, not weeks.
+            </p>
+          </div>
+
+          <!-- Card 2: AI-Driven -->
+          <div class="benefit-card">
+            <div class="benefit-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 6h2v2H4V6zm0 5h2v2H4v-2zm0 5h2v2H4v-2zm14-10h2v2h-2V6zm0 5h2v2h-2v-2zm0 5h2v2h-2v-2zM8 4h2v2H8V4zm5 0h2v2h-2V4zm-5 14h2v2H8v-2zm5 0h2v2h-2v-2zM7 7h10v10H7V7zm2 2v6h6V9H9z"/>
+              </svg>
+            </div>
+            <div class="benefit-title">AI-Driven</div>
+            <div class="benefit-subtitle">Precision Fit</div>
+            <p class="benefit-desc">
+              Skills-first matching analyzes your unique career capabilities to pinpoint the highest compatibility roles.
+            </p>
+          </div>
+
+          <!-- Card 3: Verified -->
+          <div class="benefit-card">
+            <div class="benefit-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+            </div>
+            <div class="benefit-title">Verified</div>
+            <div class="benefit-subtitle">Top Opportunities</div>
+            <p class="benefit-desc">
+              Every position is backed by vetted compensation, direct company verification, and active hiring budgets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. FEATURE SECTION: FOR JOBSEEKERS
+         ========================================================================== -->
+    <section class="feature-section" id="jobseekers">
+      <div class="container">
+        <div class="feature-grid">
+          <!-- Left Media Asset -->
+          <div class="feature-media-wrap">
+            <img src="images/feature-recruiter-card.png" alt="Professional engineer exploring tailored roles" />
+          </div>
+
+          <!-- Right Content -->
+          <div class="feature-content">
+            <span class="feature-eyebrow">FOR JOBSEEKERS</span>
+            <h2 class="feature-headline">Land roles tailored to your unique skills.</h2>
+            <p class="feature-desc">
+              Create your profile, upload your resume or browse directly to receive instant, AI-matched roles from top verified companies &mdash; all in minutes.
+            </p>
+
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <span class="feature-check-icon">✓</span>
+                Instant AI resume parsing with zero manual entry
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-check-icon">✓</span>
+                100% upfront salary transparency and remote indicators
+              </li>
+              <li class="feature-list-item">
+                <span class="feature-check-icon">✓</span>
+                Direct communication channels with engineering and hiring leads
+              </li>
+            </ul>
+
+            <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" id="feature-find-jobs-btn">
+              Find Jobs &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. FINAL CTA BANNER: SEAMLESS BLUE CARD WITH HEADROOM
+         ========================================================================== -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-card-inner">
+            <div class="cta-content">
+              <h2 class="cta-headline">Your next opportunity could be one click away.</h2>
+              <p class="cta-desc">
+                Join thousands of professionals finding matched roles and advancing their careers faster today.
+              </p>
+              <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-white" id="final-cta-btn">
+                Find My Match &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       6. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/job10-logo.png" alt="Job10" width="120" height="32" />
+          <p>
+            Job10 is the modern career platform connecting ambitious professionals with verified tech companies through instant AI skill matching.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jobseekers</h4>
+          <ul class="footer-links">
+            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Browse Jobs</a></li>
+            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Upload Resume</a></li>
+            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Salary Insights</a></li>
+            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Match Velocity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Employers</h4>
+          <ul class="footer-links">
+            <li><a href="#">Hire Top Talent</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Enterprise Solutions</a></li>
+            <li><a href="#">Recruiter Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Job10</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          Job10 &mdash; Talent Matches Faster. &copy; 2026 Job10 Platform Inc. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
