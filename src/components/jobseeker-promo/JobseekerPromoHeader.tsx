@@ -43,7 +43,7 @@ export const JobseekerPromoHeader: React.FC = () => {
             <a
               href="https://job10-delta.vercel.app/?audience=jobseeker"
               className={`${styles.btn} ${styles.btnPrimary}`}
-              style={{ height: '40px', padding: '0 22px', fontSize: '13.5px' }}
+              style={{ height: '50px', padding: '0 28px', fontSize: '18px' }}
               id="header-cta-btn"
             >
               <span>Explore Jobs Now</span>

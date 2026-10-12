@@ -13,7 +13,7 @@ export const JobseekerPromoHero: React.FC = () => {
           <div className={styles.heroContent}>
             <div className={styles.badge}>
               <span className={styles.badgeIcon}>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M7 2v11h3v9l7-12h-4l4-8z" />
                 </svg>
               </span>
