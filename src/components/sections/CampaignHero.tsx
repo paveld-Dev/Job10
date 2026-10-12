@@ -195,21 +195,14 @@ export const CampaignHero: React.FC<CampaignHeroProps> = ({
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
-                <defs>
-                  <linearGradient id="hero-clock-dial-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#38bdf8" />
-                    <stop offset="50%" stopColor="#2B3BFF" />
-                    <stop offset="100%" stopColor="#7c3aed" />
-                  </linearGradient>
-                </defs>
                 {/* Dial base circle */}
                 <circle cx="36" cy="36" r="32" stroke="#e0f2fe" strokeWidth="2.5" />
-                {/* Dial gradient arc */}
+                {/* Dial arc */}
                 <circle
                   cx="36"
                   cy="36"
                   r="32"
-                  stroke="url(#hero-clock-dial-gradient)"
+                  stroke="#2B3BFF"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeDasharray="201"

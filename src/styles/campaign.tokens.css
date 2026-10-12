@@ -8,13 +8,13 @@
   --job10-dark-surface: #101c38;
   --job10-dark-card: rgba(16, 28, 56, 0.7);
 
-  /* Brand Gradients */
-  --job10-grad-brand: linear-gradient(135deg, #2B3BFF 0%, #7c3aed 50%, #9333ea 100%);
-  --job10-grad-hero-text: linear-gradient(90deg, #38bdf8 0%, #60a5fa 35%, #a855f7 70%, #c084fc 100%);
-  --job10-grad-blue-purple: linear-gradient(135deg, #2B3BFF 0%, #8b22f5 100%);
-  --job10-grad-btn-hover: linear-gradient(135deg, #1e2ecc 0%, #7916e6 100%);
-  --job10-grad-light-blue: linear-gradient(180deg, #eff2ff 0%, #e2e8ff 100%);
-  --job10-grad-light-purple: linear-gradient(180deg, #f8f3ff 0%, #f0e6ff 100%);
+  /* Brand Colors */
+  --job10-grad-brand: #2B3BFF;
+  --job10-grad-hero-text: #2B3BFF;
+  --job10-grad-blue-purple: #2B3BFF;
+  --job10-grad-btn-hover: #1e2ecc;
+  --job10-grad-light-blue: #eff2ff;
+  --job10-grad-light-purple: #f8f3ff;
 
   /* Neutrals */
   --job10-bg-white: #ffffff;
