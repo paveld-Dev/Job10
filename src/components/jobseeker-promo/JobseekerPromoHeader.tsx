@@ -36,7 +36,6 @@ export const JobseekerPromoHeader: React.FC = () => {
               <li><a href="#benefits" className={styles.navLink}>How It Works</a></li>
               <li><a href="#jobseekers" className={styles.navLink}>For Jobseekers</a></li>
               <li><a href="#jobseekers" className={styles.navLink}>Browse Jobs</a></li>
-              <li><a href="#cta" className={styles.navLink}>Get Started</a></li>
             </ul>
           </nav>
           <div className={styles.headerRight}>
