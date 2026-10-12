@@ -199,8 +199,8 @@ section > .job10-container,
 }
 
 .job10-header-nav-link:hover {
-  color: #2563eb;
-  background-color: #eff6ff;
+  color: #2B3BFF;
+  background-color: #eff2ff;
 }
 
 .job10-header-actions-desktop {
@@ -228,15 +228,15 @@ section > .job10-container,
 }
 
 .job10-login-link:hover {
-  color: #2563eb;
-  background-color: #eff6ff;
+  color: #2B3BFF;
+  background-color: #eff2ff;
 }
 
 .job10-primary-cta-btn {
   height: 44px;
   padding: 0 22px;
   border-radius: 12px;
-  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #2B3BFF 0%, #7c3aed 100%);
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
@@ -245,7 +245,7 @@ section > .job10-container,
   align-items: center;
   gap: 8px;
   border: none;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 14px rgba(43, 59, 255, 0.35);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
   cursor: pointer;
@@ -356,15 +356,15 @@ section > .job10-container,
   height: 52px;
   border-radius: 14px;
   background: #ffffff;
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.16);
-  border: 1px solid #e0f2fe;
+  box-shadow: 0 12px 28px rgba(43, 59, 255, 0.16);
+  border: 1px solid #e0e7ff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .job10-badge-icon {
-  color: #2563eb;
+  color: #2B3BFF;
 }
 
 .job10-floating-badge--briefcase {
@@ -435,7 +435,7 @@ section > .job10-container,
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #2563eb;
+  color: #2B3BFF;
 }
 
 /* 2. Headline */
@@ -467,7 +467,7 @@ section > .job10-container,
 }
 
 .job10-h1-gradient-text {
-  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #2B3BFF 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -538,9 +538,9 @@ section > .job10-container,
 }
 
 .job10-hero-pill-btn.is-active-pill {
-  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #2B3BFF 0%, #7c3aed 100%);
   color: #ffffff;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 24px rgba(43, 59, 255, 0.35);
 }
 
 .job10-hero-pill-btn.is-active-pill:hover {
@@ -629,7 +629,7 @@ section > .job10-container,
 }
 
 .job10-search-field:focus-within {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #2B3BFF;
   outline-offset: -2px;
 }
 
@@ -670,7 +670,7 @@ section > .job10-container,
 .job10-search-btn {
   height: 50px;
   border-radius: 9999px;
-  background-color: #2563eb;
+  background-color: #2B3BFF;
   color: #ffffff;
   border: none;
   padding: 0 24px;
@@ -683,18 +683,18 @@ section > .job10-container,
   white-space: nowrap;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(43, 59, 255, 0.3);
   transition: all 0.15s ease;
 }
 
 .job10-search-btn:hover {
-  background-color: #1d4ed8;
+  background-color: #1e2ecc;
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 18px rgba(43, 59, 255, 0.4);
 }
 
 .job10-search-btn:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #2B3BFF;
   outline-offset: 2px;
 }
 
@@ -723,7 +723,7 @@ section > .job10-container,
 }
 
 .job10-hero-resume-link:hover {
-  color: #2563eb;
+  color: #2B3BFF;
 }
 
 .job10-resume-icon {
@@ -756,7 +756,7 @@ section > .job10-container,
 .job10-talent-btn {
   height: 48px;
   border-radius: 9999px;
-  background-color: #2563eb;
+  background-color: #2B3BFF;
   color: #ffffff;
   border: none;
   padding: 0 24px;
@@ -768,12 +768,12 @@ section > .job10-container,
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(43, 59, 255, 0.3);
   transition: all 0.15s ease;
 }
 
 .job10-talent-btn:hover {
-  background-color: #1d4ed8;
+  background-color: #1e2ecc;
   transform: translateY(-1px);
 }
 
@@ -820,9 +820,9 @@ section > .job10-container,
 }
 
 .job10-step-icon--blue {
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #dbeafe;
+  background: #eff2ff;
+  color: #2B3BFF;
+  border: 1px solid #dce4ff;
 }
 
 .job10-step-icon--purple {
@@ -1128,15 +1128,15 @@ section > .job10-container,
   height: 44px;
   border-radius: 12px;
   background: #f1f5f9;
-  color: #2563eb;
+  color: #2B3BFF;
   transition: all 0.2s ease;
   margin: 0 auto;
 }
 
 .job10-cat-card:hover .job10-cat-card-icon-wrap,
 .job10-cat-card.is-highlighted .job10-cat-card-icon-wrap {
-  background: #eff6ff;
-  color: #2563eb;
+  background: #eff2ff;
+  color: #2B3BFF;
   transform: scale(1.06);
 }
 
@@ -1178,7 +1178,7 @@ section > .job10-container,
 }
 
 .job10-cat-card-arrow {
-  color: #2563eb;
+  color: #2B3BFF;
   transition: transform 0.15s ease;
   flex-shrink: 0;
 }
@@ -1508,7 +1508,7 @@ section > .job10-container,
 }
 
 .job10-hiw-title-highlight {
-  color: #2563eb;
+  color: #2B3BFF;
   display: inline-block;
 }
 
@@ -1526,18 +1526,18 @@ section > .job10-container,
   gap: 12px;
   padding: 8px 24px 8px 8px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #2563eb 0%, #6366f1 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #2B3BFF 0%, #6366f1 50%, #7c3aed 100%);
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 10px 25px -5px rgba(43, 59, 255, 0.35);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .job10-hiw-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 14px 30px -5px rgba(43, 59, 255, 0.45);
   color: #ffffff;
 }
 
@@ -1546,7 +1546,7 @@ section > .job10-container,
   height: 38px;
   border-radius: 50%;
   background: #ffffff;
-  color: #2563eb;
+  color: #2B3BFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1659,8 +1659,8 @@ section > .job10-container,
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #eff2ff;
+  color: #2B3BFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1689,7 +1689,7 @@ section > .job10-container,
   right: 50px;
   z-index: 5;
   transform: rotate(-15deg);
-  filter: drop-shadow(0 4px 10px rgba(37, 99, 235, 0.25));
+  filter: drop-shadow(0 4px 10px rgba(43, 59, 255, 0.25));
 }
 
 /* Floating Briefcase */
@@ -1781,9 +1781,9 @@ section > .job10-container,
 }
 
 .job10-hiw-step-icon-wrap--blue {
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #dbeafe;
+  background: #eff2ff;
+  color: #2B3BFF;
+  border: 1px solid #dce4ff;
 }
 
 .job10-hiw-step-icon-wrap--purple {
@@ -1979,8 +1979,8 @@ section > .job10-container,
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #e0edff;
-  color: #2563eb;
+  background: #e0e7ff;
+  color: #2B3BFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2160,13 +2160,13 @@ section > .job10-container,
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.30);
+  box-shadow: 0 4px 14px rgba(43, 59, 255, 0.30);
   font-family: inherit;
 }
 
 .job10-btn-white-solid:hover {
-  background: #1d4ed8;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.40);
+  background: #1e2ecc;
+  box-shadow: 0 6px 20px rgba(43, 59, 255, 0.40);
   transform: translateY(-1px);
 }
 
@@ -2185,13 +2185,13 @@ section > .job10-container,
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: inherit;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 2px 8px rgba(43, 59, 255, 0.08);
 }
 
 .job10-btn-outline-navy:hover {
-  background: #eff6ff;
-  border-color: #1d4ed8;
-  color: #1d4ed8;
+  background: #eff2ff;
+  border-color: #1e2ecc;
+  color: #1e2ecc;
   transform: translateY(-1px);
 }
 
@@ -2372,7 +2372,7 @@ section > .job10-container,
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #0d9488 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #2B3BFF 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2530,7 +2530,7 @@ section > .job10-container,
 }
 
 .job10-resume-status-badge.is-uploading {
-  color: #2563eb;
+  color: #2B3BFF;
   font-size: 12px;
   font-weight: 600;
 }

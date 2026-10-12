@@ -77,7 +77,7 @@ export const HowItWorks: React.FC = () => {
 
               {/* Floating Paper Plane Icon */}
               <div className="job10-hiw-floating-plane">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="#2563eb" xmlns="http://www.w3.org/2000/svg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#2B3BFF" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
                 </svg>
               </div>
@@ -94,7 +94,7 @@ export const HowItWorks: React.FC = () => {
 
               {/* Floating Briefcase Icon Card */}
               <div className="job10-hiw-floating-briefcase">
-                <Briefcase size={18} color="#2563eb" />
+                <Briefcase size={18} color="#2B3BFF" />
               </div>
 
               {/* Bottom Floating Badge: 'Join top companies' */}

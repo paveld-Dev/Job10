@@ -22,7 +22,7 @@ export const TenRing: React.FC<TenRingProps> = ({ children }) => {
       >
         <defs>
           <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#2563eb" />
+            <stop offset="0%" stopColor="#2B3BFF" />
             <stop offset="100%" stopColor="#7c3aed" />
           </linearGradient>
         </defs>

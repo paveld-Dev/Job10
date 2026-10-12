@@ -102,10 +102,10 @@ export const CategoryBrowse: React.FC<CategoryBrowseProps> = () => {
                 <div className="job10-collage-badge">
                   <div className="job10-collage-badge-icon" aria-hidden="true">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="9" r="4.5" stroke="#2563EB" strokeWidth="2.2" />
-                      <path d="M3 23C3 19.134 6.134 16 10 16C13.866 16 17 19.134 17 23" stroke="#2563EB" strokeWidth="2.2" strokeLinecap="round" />
-                      <circle cx="19.5" cy="10" r="3.2" stroke="#2563EB" strokeWidth="2" strokeDasharray="1 0" />
-                      <path d="M17.5 17.5C19.5 17.8 21.5 19 22.5 21" stroke="#2563EB" strokeWidth="2.2" strokeLinecap="round" />
+                      <circle cx="10" cy="9" r="4.5" stroke="#2B3BFF" strokeWidth="2.2" />
+                      <path d="M3 23C3 19.134 6.134 16 10 16C13.866 16 17 19.134 17 23" stroke="#2B3BFF" strokeWidth="2.2" strokeLinecap="round" />
+                      <circle cx="19.5" cy="10" r="3.2" stroke="#2B3BFF" strokeWidth="2" strokeDasharray="1 0" />
+                      <path d="M17.5 17.5C19.5 17.8 21.5 19 22.5 21" stroke="#2B3BFF" strokeWidth="2.2" strokeLinecap="round" />
                     </svg>
                   </div>
                   <div className="job10-collage-badge-text">
@@ -116,9 +116,9 @@ export const CategoryBrowse: React.FC<CategoryBrowseProps> = () => {
                 {/* Celebratory burst rays */}
                 <div className="job10-collage-burst" aria-hidden="true">
                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="13" y1="2" x2="13" y2="7" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
-                    <line x1="21" y1="5" x2="17.5" y2="9.5" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
-                    <line x1="24" y1="13" x2="19" y2="13" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
+                    <line x1="13" y1="2" x2="13" y2="7" stroke="#2B3BFF" strokeWidth="2.5" strokeLinecap="round" />
+                    <line x1="21" y1="5" x2="17.5" y2="9.5" stroke="#2B3BFF" strokeWidth="2.5" strokeLinecap="round" />
+                    <line x1="24" y1="13" x2="19" y2="13" stroke="#2B3BFF" strokeWidth="2.5" strokeLinecap="round" />
                   </svg>
                 </div>
               </div>

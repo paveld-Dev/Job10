@@ -26,7 +26,7 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ config }) =>
                 <div className="job10-why-icon-card" aria-hidden="true">
                   {/* File with Sparkle */}
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="4" width="20" height="26" rx="4" fill="#2563EB" />
+                    <rect x="5" y="4" width="20" height="26" rx="4" fill="#2B3BFF" />
                     <rect x="9" y="10" width="12" height="2.5" rx="1.25" fill="#FFFFFF" />
                     <rect x="9" y="15" width="12" height="2.5" rx="1.25" fill="#FFFFFF" />
                     <rect x="9" y="20" width="7" height="2.5" rx="1.25" fill="#FFFFFF" />
@@ -53,8 +53,8 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ config }) =>
                 <div className="job10-why-icon-card" aria-hidden="true">
                   {/* Team of Users with Plus */}
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="12" r="5" fill="#2563EB" />
-                    <path d="M5 26C5 21.5817 8.58172 18 13 18C17.4183 18 21 21.5817 21 26H5Z" fill="#2563EB" />
+                    <circle cx="13" cy="12" r="5" fill="#2B3BFF" />
+                    <path d="M5 26C5 21.5817 8.58172 18 13 18C17.4183 18 21 21.5817 21 26H5Z" fill="#2B3BFF" />
                     <circle cx="22" cy="11" r="3.5" fill="#60A5FA" />
                     <path d="M20 18C21.6 18 23 18.6 24 19.5C26 21 27 23.3 27 26H23C23 22.8 21.8 20 20 18Z" fill="#60A5FA" />
                     <circle cx="27" cy="8" r="4.5" fill="#A855F7" />
@@ -123,8 +123,8 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ config }) =>
                 <div className="job10-why-icon-card" aria-hidden="true">
                   {/* Briefcase with Checkmark */}
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="4" y="10" width="24" height="17" rx="3.5" fill="#2563EB" />
-                    <path d="M11 10V7C11 5.34315 12.3431 4 14 4H18C19.6569 4 21 5.34315 21 7V10" stroke="#2563EB" strokeWidth="2.5" />
+                    <rect x="4" y="10" width="24" height="17" rx="3.5" fill="#2B3BFF" />
+                    <path d="M11 10V7C11 5.34315 12.3431 4 14 4H18C19.6569 4 21 5.34315 21 7V10" stroke="#2B3BFF" strokeWidth="2.5" />
                     <circle cx="26" cy="22" r="5" fill="#A855F7" />
                     <path d="M23.5 22L25 23.5L28.5 20.5" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -149,7 +149,7 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ config }) =>
                 <div className="job10-why-icon-card" aria-hidden="true">
                   {/* Growing Bar Chart */}
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="6" y="19" width="5.5" height="10" rx="2" fill="#2563EB" />
+                    <rect x="6" y="19" width="5.5" height="10" rx="2" fill="#2B3BFF" />
                     <rect x="14" y="13" width="5.5" height="16" rx="2" fill="#4F46E5" />
                     <rect x="22" y="7" width="5.5" height="22" rx="2" fill="#7C3AED" />
                     <circle cx="24.75" cy="5" r="2.5" fill="#A855F7" />
@@ -175,7 +175,7 @@ export const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ config }) =>
                 <div className="job10-why-icon-card" aria-hidden="true">
                   {/* Shield with Checkmark */}
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 4L7 8V16C7 23 11.5 28.5 17 30C22.5 28.5 27 23 27 16V8L17 4Z" fill="#2563EB" />
+                    <path d="M17 4L7 8V16C7 23 11.5 28.5 17 30C22.5 28.5 27 23 27 16V8L17 4Z" fill="#2B3BFF" />
                     <path d="M12.5 16.5L15.5 19.5L21.5 13.5" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>

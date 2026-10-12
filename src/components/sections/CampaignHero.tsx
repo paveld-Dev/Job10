@@ -198,7 +198,7 @@ export const CampaignHero: React.FC<CampaignHeroProps> = ({
                 <defs>
                   <linearGradient id="hero-clock-dial-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#38bdf8" />
-                    <stop offset="50%" stopColor="#2563eb" />
+                    <stop offset="50%" stopColor="#2B3BFF" />
                     <stop offset="100%" stopColor="#7c3aed" />
                   </linearGradient>
                 </defs>
