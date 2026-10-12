@@ -40,12 +40,6 @@ export const JobseekerPromoHeader: React.FC = () => {
             </nav>
           </div>
           <div className={styles.headerRight}>
-            <span className={styles.headerPill}>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="#2b3bff" style={{ display: 'block' }} aria-hidden="true">
-                <path d="M7 2v11h3v9l7-12h-4l4-8z" />
-              </svg>
-              Talent Matches Faster
-            </span>
             <a
               href="https://job10-delta.vercel.app/?audience=jobseeker"
               className={`${styles.btn} ${styles.btnPrimary}`}
