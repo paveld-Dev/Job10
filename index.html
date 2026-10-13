@@ -502,263 +502,214 @@
     }
 
     /* ==========================================================================
-       SECTION 04: FEATURE SPOTLIGHT (FOR JOBSEEKERS)
+       SECTION 04: COLLABORATIVE TECH ECOSYSTEM
        ========================================================================== */
     .feature-section {
       padding-top: clamp(64px, 7vw, 96px);
       padding-bottom: clamp(64px, 7vw, 100px);
-      background-color: #f8fafc;
+      background-color: #ffffff;
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
     }
 
-    .feature-grid {
+    .feature-grid-3col {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: clamp(48px, 6vw, 84px);
+      grid-template-columns: 1.15fr 0.95fr 0.88fr;
+      align-items: stretch;
+      gap: clamp(24px, 3.2vw, 44px);
     }
 
-    .feature-media-wrap {
-      position: relative;
+    /* Left Column */
+    .feature-col-left {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .feature-glow {
-      position: absolute;
-      width: 440px;
-      height: 440px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(43, 59, 255, 0.14) 0%, rgba(99, 102, 241, 0.06) 50%, transparent 70%);
-      filter: blur(44px);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .feature-image-card {
-      position: relative;
-      z-index: 2;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.85);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .feature-image-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .feature-media-wrap img {
-      width: 100%;
-      max-width: 460px;
-      height: auto;
-      display: block;
-    }
-
-    /* Floating Badges */
-    .floating-card {
-      position: absolute;
-      z-index: 3;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1.5px solid rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
-      padding: 14px 20px;
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(43, 59, 255, 0.06);
-      transition: transform 0.25s ease;
-    }
-
-    .floating-card-top {
-      top: -16px;
-      left: -28px;
-      right: auto;
-      animation: floatCardTop 4.5s ease-in-out infinite;
-    }
-
-    .floating-card-bottom {
-      bottom: -16px;
-      right: -28px;
-      left: auto;
-      animation: floatCardBottom 5s ease-in-out infinite;
-    }
-
-    @keyframes floatCardTop {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    @keyframes floatCardBottom {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
-    .floating-card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      color: #15803d;
-      margin-bottom: 4px;
-    }
-
-    .pulse-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #22c55e;
-      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-      animation: pulseGreen 2s infinite;
-    }
-
-    @keyframes pulseGreen {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-      }
-    }
-
-    .floating-card-title {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.3;
-    }
-
-    .floating-card-meta {
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-top: 3px;
-    }
-
-    .floating-card-salary {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 3px;
-    }
-
-    .salary-badge {
-      font-size: 20px;
-      font-weight: 800;
-      color: #2b3bff;
-    }
-
-    .salary-type {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    /* Feature Content */
-    .feature-content {
-      max-width: 580px;
-    }
-
-    .feature-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--primary);
-      letter-spacing: 0.04em;
-      background-color: rgba(43, 59, 255, 0.08);
-      border: 1.5px solid rgba(43, 59, 255, 0.18);
-      padding: 6px 18px;
-      border-radius: var(--pill-radius);
-      margin-bottom: 18px;
+    .feature-left-top {
+      margin-bottom: clamp(24px, 3vw, 36px);
     }
 
     .feature-headline {
-      font-size: clamp(34px, 3.5vw, 44px);
+      font-size: clamp(32px, 3.2vw, 42px);
       font-weight: 800;
-      line-height: 1.22;
+      line-height: 1.2;
       color: var(--navy);
       letter-spacing: -0.025em;
-      margin-bottom: 20px;
+      margin: 0 0 18px 0;
     }
 
     .feature-desc {
-      font-size: 19px;
+      font-size: 15px;
       line-height: 1.65;
       color: var(--text-muted);
-      margin-bottom: 32px;
+      margin: 0;
     }
 
-    .feature-list {
+    .feature-cards-wrap {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin: 0 0 38px 0;
-      padding: 0;
+      gap: 14px;
     }
 
-    .feature-pillar {
+    .feature-pill-card {
       display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      padding: 18px 22px;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background-color: #f6f8fb;
+      border-radius: 18px;
+      border: 1px solid rgba(226, 232, 240, 0.7);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .feature-pill-card:hover {
       background-color: #ffffff;
-      border-radius: 20px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .feature-pillar:hover {
-      border-color: rgba(43, 59, 255, 0.35);
+      border-color: rgba(43, 59, 255, 0.3);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43, 59, 255, 0.09);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
     }
 
-    .feature-icon-badge {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
-      background-color: var(--primary-light);
-      color: var(--primary);
-      display: inline-flex;
+    .feature-pill-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: #ffffff;
+      display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(43, 59, 255, 0.25);
     }
 
-    .feature-pillar:hover .feature-icon-badge {
-      transform: scale(1.08);
+    .feature-pill-card:hover .feature-pill-icon {
+      transform: scale(1.06);
+      background-color: var(--primary-hover);
+      box-shadow: 0 6px 16px rgba(43, 59, 255, 0.35);
     }
 
-    .feature-pillar-content {
+    .feature-pill-body {
       flex: 1;
     }
 
-    .feature-pillar-title {
-      font-size: 20px;
-      font-weight: 800;
+    .feature-pill-title {
+      font-size: 17px;
+      font-weight: 700;
       color: var(--navy);
-      margin: 0 0 4px 0;
+      margin: 0 0 3px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-pill-desc {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Center Column */
+    .feature-col-center {
+      display: flex;
+      height: 100%;
+    }
+
+    .feature-center-img {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .feature-center-img:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Right Column */
+    .feature-col-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .feature-right-top {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 4px;
+    }
+
+    .feature-right-title {
+      font-size: clamp(20px, 1.8vw, 24px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin: 0 0 8px 0;
       letter-spacing: -0.015em;
     }
 
-    .feature-pillar-desc {
-      font-size: 18px;
-      line-height: 1.55;
+    .feature-right-desc {
+      font-size: 14px;
+      line-height: 1.5;
       color: var(--text-muted);
-      margin: 0;
+      margin: 0 0 18px 0;
+    }
+
+    .feature-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background-color: var(--primary);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(43, 59, 255, 0.28);
+    }
+
+    .feature-more-btn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(43, 59, 255, 0.38);
+      color: #ffffff;
+    }
+
+    .feature-more-btn span.btn-arrow {
+      transition: transform 0.15s ease;
+      display: inline-block;
+    }
+
+    .feature-more-btn:hover span.btn-arrow {
+      transform: translateX(4px);
+    }
+
+    .feature-right-img-wrap {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .feature-right-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .feature-right-img-wrap:hover .feature-right-img {
+      transform: scale(1.03);
     }
 
     /* ==========================================================================
@@ -815,58 +766,15 @@
     }
 
     /* ==========================================================================
-       SECTION 06: FOOTER
+       SECTION 06: FOOTER (SIMPLE & CLEAN)
        ========================================================================== */
     .site-footer {
       background-color: #ffffff;
       border-top: 1px solid var(--border-subtle);
-      padding-top: clamp(56px, 6vw, 80px);
-      padding-bottom: 48px;
+      padding: 32px 0;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.6fr repeat(3, 1fr);
-      gap: 48px;
-      margin-bottom: 56px;
-    }
-
-    .footer-brand p {
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--text-muted);
-      margin-top: 18px;
-      max-width: 340px;
-    }
-
-    .footer-col h4 {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 20px;
-      letter-spacing: 0.02em;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .footer-links a {
-      font-size: 18px;
-      color: var(--text-muted);
-      transition: color 0.15s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 32px;
+    .footer-simple {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -874,19 +782,44 @@
       gap: 20px;
     }
 
-    .footer-copyright {
-      font-size: 18px;
-      color: var(--text-muted);
-    }
-
-    .footer-legal-links {
+    .footer-simple-brand {
       display: flex;
-      gap: 28px;
-      font-size: 18px;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-simple-brand a {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .footer-simple-brand img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-simple-copy {
+      font-size: 14px;
       color: var(--text-muted);
     }
 
-    .footer-legal-links a:hover {
+    .footer-simple-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-simple-links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-simple-links a:hover {
       color: var(--primary);
     }
 
@@ -921,31 +854,35 @@
         grid-template-columns: 1fr;
       }
 
-      .feature-grid {
+      .feature-grid-3col {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 40px;
       }
 
-      .feature-media-wrap {
-        margin-bottom: 32px;
+      .feature-col-left {
+        max-width: 680px;
+        margin: 0 auto;
       }
 
-      .floating-card-top {
-        top: -10px;
-        right: 0;
+      .feature-col-center {
+        max-width: 540px;
+        margin: 0 auto;
+        width: 100%;
       }
 
-      .floating-card-bottom {
-        bottom: -10px;
-        left: 0;
+      .feature-center-img {
+        min-height: 380px;
+        max-height: 480px;
       }
 
-      .feature-content {
-        max-width: 100%;
+      .feature-col-right {
+        max-width: 540px;
+        margin: 0 auto;
+        width: 100%;
       }
 
-      .feature-pillar {
-        text-align: left;
+      .feature-right-img {
+        max-height: 280px;
       }
 
       .cta-card-inner {
@@ -960,10 +897,6 @@
 
       .cta-card {
         background-position: right bottom;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -988,9 +921,24 @@
       .cta-card {
         background-position: 80% bottom;
       }
+    }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      .footer-simple {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+      }
+
+      .footer-simple-brand {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-simple-links {
+        justify-content: center;
+        gap: 18px;
       }
     }
   </style>
@@ -1145,91 +1093,83 @@
     </section>
 
     <!-- ==========================================================================
-         4. FEATURE SECTION: FOR JOBSEEKERS
+         4. FEATURE / ABOUT: COLLABORATIVE TECH ECOSYSTEM
          ========================================================================== -->
     <section class="feature-section" id="jobseekers">
       <div class="container">
-        <div class="feature-grid">
-          <!-- Left Media Asset with Floating Badges -->
-          <div class="feature-media-wrap">
-            <div class="feature-glow" aria-hidden="true"></div>
-
-            <div class="feature-image-card">
-              <img src="images/feature-recruiter-card.png" alt="Professional engineer exploring tailored roles" class="feature-media-img" width="460" height="460" />
+        <div class="feature-grid-3col">
+          <!-- Left Column: Headline, Summary & Cards -->
+          <div class="feature-col-left">
+            <div class="feature-left-top">
+              <h2 class="feature-headline">Collaborate to Build The Innovative Tech Ecosystem</h2>
+              <p class="feature-desc">
+                Create a high-impact collaborative environment where leading tech talent and innovative organizations connect, build, and scale together seamlessly.
+              </p>
             </div>
 
-            <!-- Top Floating Match Card -->
-            <div class="floating-card floating-card-top">
-              <div class="floating-card-badge">
-                <span class="pulse-dot"></span>
-                <span>98% Compatibility</span>
+            <div class="feature-cards-wrap">
+              <div class="feature-pill-card">
+                <div class="feature-pill-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                  </svg>
+                </div>
+                <div class="feature-pill-body">
+                  <h3 class="feature-pill-title">Panel With Expert Developers</h3>
+                  <p class="feature-pill-desc">Direct access to vetted engineering leads and technical advisors.</p>
+                </div>
               </div>
-              <div class="floating-card-title">Senior Software Engineer</div>
-              <div class="floating-card-meta">Verified Direct Match &middot; Active Hiring</div>
-            </div>
 
-            <!-- Bottom Floating Salary Card -->
-            <div class="floating-card floating-card-bottom">
-              <div class="floating-card-salary">
-                <span class="salary-badge">$150K &ndash; $185K</span>
-                <span class="salary-type">/ year</span>
+              <div class="feature-pill-card">
+                <div class="feature-pill-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M6 12h.01M18 12h.01"></path>
+                  </svg>
+                </div>
+                <div class="feature-pill-body">
+                  <h3 class="feature-pill-title">Focusing On Revenue</h3>
+                  <p class="feature-pill-desc">Accelerate business value and high-velocity product delivery.</p>
+                </div>
               </div>
-              <div class="floating-card-meta">100% Remote &middot; Full Equity Package</div>
             </div>
           </div>
 
-          <!-- Right Content -->
-          <div class="feature-content">
-            <span class="feature-eyebrow">
-              <span>✦</span> FOR JOBSEEKERS
-            </span>
-            <h2 class="feature-headline">Land roles tailored to your unique skills.</h2>
-            <p class="feature-desc">
-              Create your profile, upload your resume or browse directly to receive instant, AI-matched roles from top verified companies &mdash; all in minutes.
-            </p>
+          <!-- Center Column: Large Portrait Photo -->
+          <div class="feature-col-center">
+            <img 
+              src="images/collaborate-team.jpg" 
+              alt="Three confident business professionals in navy suits standing in modern glass office" 
+              class="feature-center-img" 
+              width="480" 
+              height="640"
+              loading="lazy"
+            />
+          </div>
 
-            <div class="feature-list">
-              <div class="feature-pillar">
-                <div class="feature-icon-badge">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                  </svg>
-                </div>
-                <div class="feature-pillar-content">
-                  <h3 class="feature-pillar-title">Instant AI Resume Matching</h3>
-                  <p class="feature-pillar-desc">Zero manual entry &mdash; intelligent parsing maps your capabilities directly to open positions.</p>
-                </div>
-              </div>
-
-              <div class="feature-pillar">
-                <div class="feature-icon-badge">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-                  </svg>
-                </div>
-                <div class="feature-pillar-content">
-                  <h3 class="feature-pillar-title">100% Upfront Salary Transparency</h3>
-                  <p class="feature-pillar-desc">No guesswork. View exact compensation benchmarks, verified equity, and remote policies upfront.</p>
-                </div>
-              </div>
-
-              <div class="feature-pillar">
-                <div class="feature-icon-badge">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z" />
-                  </svg>
-                </div>
-                <div class="feature-pillar-content">
-                  <h3 class="feature-pillar-title">Direct Hiring Manager Channels</h3>
-                  <p class="feature-pillar-desc">Skip application black holes and start conversations directly with vetted tech leaders.</p>
-                </div>
-              </div>
+          <!-- Right Column: Header, Link & Office Photo -->
+          <div class="feature-col-right">
+            <div class="feature-right-top">
+              <h3 class="feature-right-title">Collaboration Is the Key of Success</h3>
+              <p class="feature-right-desc">Direct connection with verified technical leaders driving high-impact growth.</p>
+              <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="feature-more-btn" id="feature-more-btn">
+                <span>More About Us</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
             </div>
-
-            <a href="https://job10-delta.vercel.app/?audience=jobseeker" class="btn btn-primary" id="feature-find-jobs-btn">
-              <span>Find Jobs Now</span>
-              <span class="btn-arrow">&rarr;</span>
-            </a>
+            <div class="feature-right-img-wrap">
+              <img 
+                src="images/collaborate-office.jpg" 
+                alt="Two employees at desk with monitors showing charts" 
+                class="feature-right-img" 
+                width="360" 
+                height="360"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -1259,56 +1199,22 @@
 
   <!-- ==========================================================================
        6. FOOTER
+  <!-- ==========================================================================
+       6. FOOTER (SIMPLE)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="images/job10-logo.png" alt="Job10" width="120" height="32" />
-          <p>
-            Job10 is the modern career platform connecting ambitious professionals with verified tech companies through instant AI skill matching.
-          </p>
+      <div class="footer-simple">
+        <div class="footer-simple-brand">
+          <a href="#" aria-label="Job10 Home">
+            <img src="images/job10-logo.png" alt="Job10" width="108" height="28" />
+          </a>
+          <span class="footer-simple-copy">&copy; 2026 Job10 Platform Inc. All rights reserved.</span>
         </div>
-
-        <div class="footer-col">
-          <h4>Jobseekers</h4>
-          <ul class="footer-links">
-            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Browse Jobs</a></li>
-            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Upload Resume</a></li>
-            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Salary Insights</a></li>
-            <li><a href="https://job10-delta.vercel.app/?audience=jobseeker">Match Velocity</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Employers</h4>
-          <ul class="footer-links">
-            <li><a href="#">Hire Top Talent</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Enterprise Solutions</a></li>
-            <li><a href="#">Recruiter Portal</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="#">About Job10</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Support</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          Job10 &mdash; Talent Matches Faster. &copy; 2026 Job10 Platform Inc. All rights reserved.
-        </div>
-        <div class="footer-legal-links">
+        <div class="footer-simple-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-          <a href="#">Cookie Preferences</a>
+          <a href="#">Contact Support</a>
         </div>
       </div>
     </div>
