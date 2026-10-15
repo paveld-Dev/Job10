@@ -3,11 +3,21 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://job10-delta.vercel.app'),
-  title: 'Job10 — Your Next Opportunity Starts in 10 Minutes',
+  title: 'Job10 — Your Next Career Move Starts in 10 Minutes',
   description:
-    'Find opportunities that match your skills or discover talent that fits your team. AI-powered matching connecting qualified candidates with top companies faster.',
+    'Skip application black holes. Job10 connects you directly with top verified companies through intelligent AI skill matching in just 10 minutes.',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 
@@ -19,6 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

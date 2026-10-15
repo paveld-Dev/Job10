@@ -1,7 +1,21 @@
+@import "tailwindcss";
 @import '../styles/campaign.tokens.css';
 @import '../styles/campaign.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
+
+@theme {
+  --color-primary: #2b3bff;
+  --color-primary-hover: #1e2ecc;
+  --color-primary-light: #eff2ff;
+  --color-navy: #0b1a3c;
+  --color-text-muted: #64748b;
+  --color-text-body: #334155;
+  --color-bg-light: #f8fafc;
+  --color-border-subtle: #e2e8f0;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-card: 20px;
+  --radius-pill: 9999px;
+}
 
 * {
   box-sizing: border-box;
@@ -12,9 +26,9 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  font-family: 'Geist', var(--job10-font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #ffffff;
-  color: #0f172a;
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: var(--color-navy);
   overflow-x: hidden;
 }
 

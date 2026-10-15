@@ -15,8 +15,8 @@ export const Job10Logo: React.FC<Job10LogoProps> = ({
   variant = 'navy',
 }) => {
   const h = height || (size ? Math.round(size * 1.0) : 36);
-  // Aspect ratio of job10-logo.png (845 x 221) is 3.8235
-  const w = Math.round(h * 3.8235);
+  // Aspect ratio of job10-logo.png (872 x 307) is 2.8404
+  const w = Math.round(h * 2.8404);
 
   return (
     <div
