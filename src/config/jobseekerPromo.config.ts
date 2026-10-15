@@ -79,9 +79,9 @@ const makeUtmUrl = (content: string): string => {
 
 export const jobseekerPromoConfig: JobseekerPromoConfig = {
   meta: {
-    title: 'Job10 — Your Next Opportunity Starts in 10 Minutes',
+    title: 'Job10 — Your Next Career Move Starts in 10 Minutes',
     description:
-      'Skip endless application black holes. Upload your resume or browse directly to receive instant, AI-matched roles from top verified companies.',
+      'Skip application black holes. Job10 connects you directly with top verified companies through intelligent AI skill matching in just 10 minutes.',
     ogImage: '/images/hero-clean-banner.jpg',
   },
   redirectUrls: {

@@ -1,85 +1,83 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import styles from './jobseekerPromo.module.css';
 
 export const JobseekerPromoFeature: React.FC = () => {
   return (
-    <section className={styles.featureSection} id="jobseekers">
+    <section className={`${styles.featureSection} ${styles.popularOpenings}`} id="jobseekers" aria-labelledby="popular-openings-title">
       <div className={styles.container}>
-        <div className={styles.featureGrid3Col}>
-          {/* Left Column: Headline, Summary & Cards */}
-          <div className={styles.featureColLeft}>
-            <div className={styles.featureLeftTop}>
-              <h2 className={styles.featureHeadline}>Collaborate to Build The Innovative Tech Ecosystem</h2>
-              <p className={styles.featureDesc}>
-                Create a high-impact collaborative environment where leading tech talent and innovative organizations connect, build, and scale together seamlessly.
-              </p>
-            </div>
-
-            <div className={styles.featureCardsWrap}>
-              <div className={styles.featurePillCard}>
-                <div className={styles.featurePillIcon} aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  </svg>
-                </div>
-                <div className={styles.featurePillBody}>
-                  <h3 className={styles.featurePillTitle}>Panel With Expert Developers</h3>
-                  <p className={styles.featurePillDesc}>Direct access to vetted engineering leads and technical advisors.</p>
-                </div>
-              </div>
-
-              <div className={styles.featurePillCard}>
-                <div className={styles.featurePillIcon} aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="6" width="20" height="12" rx="2" />
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M6 12h.01M18 12h.01" />
-                  </svg>
-                </div>
-                <div className={styles.featurePillBody}>
-                  <h3 className={styles.featurePillTitle}>Focusing On Revenue</h3>
-                  <p className={styles.featurePillDesc}>Accelerate business value and high-velocity product delivery.</p>
-                </div>
-              </div>
-            </div>
+        <div className={styles.openingsTop}>
+          <div>
+            <h2 id="popular-openings-title">Popular Job Openings</h2>
+            <p className={styles.openingsIntro}>
+              Explore roles across in-demand fields and discover opportunities that match your skills and experience.
+            </p>
           </div>
-
-          {/* Center Column: Large Portrait Photo */}
-          <div className={styles.featureColCenter}>
-            <Image
-              src="/images/collaborate-team.jpg"
-              alt="Three confident business professionals in navy suits standing in modern glass office"
-              width={480}
-              height={640}
-              className={styles.featureCenterImg}
-            />
-          </div>
-
-          {/* Right Column: Header, Link & Office Photo */}
-          <div className={styles.featureColRight}>
-            <div className={styles.featureRightTop}>
-              <h3 className={styles.featureRightTitle}>Collaboration Is the Key of Success</h3>
-              <p className={styles.featureRightDesc}>Direct connection with verified technical leaders driving high-impact growth.</p>
-              <a href="https://job10-delta.vercel.app/?audience=jobseeker" className={styles.featureMoreBtn} id="feature-more-btn">
-                <span>More About Us</span>
-                <span className={styles.btnArrow}>&rarr;</span>
-              </a>
+        </div>
+        <div className={styles.openingsList} aria-label="Example job categories">
+          <article className={styles.openingRow}>
+            <div className={styles.openingSymbol} aria-hidden="true">01</div>
+            <div className={styles.openingInfo}>
+              <h3>Software Developer</h3>
+              <p>Engineering <span aria-hidden="true">·</span> Explore matching opportunities</p>
             </div>
-            <div className={styles.featureRightImgWrap}>
-              <Image
-                src="/images/collaborate-office.jpg"
-                alt="Two employees at desk with monitors showing charts"
-                width={360}
-                height={360}
-                className={styles.featureRightImg}
-              />
+            <a
+              className={styles.openingLink}
+              href="https://job10-delta.vercel.app/?audience=jobseeker"
+              aria-label="Explore Software Developer opportunities"
+            >
+              Explore roles <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article className={styles.openingRow}>
+            <div className={styles.openingSymbol} aria-hidden="true">02</div>
+            <div className={styles.openingInfo}>
+              <h3>UI/UX Designer</h3>
+              <p>Design <span aria-hidden="true">·</span> Explore matching opportunities</p>
             </div>
-          </div>
+            <a
+              className={styles.openingLink}
+              href="https://job10-delta.vercel.app/?audience=jobseeker"
+              aria-label="Explore UI/UX Designer opportunities"
+            >
+              Explore roles <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article className={styles.openingRow}>
+            <div className={styles.openingSymbol} aria-hidden="true">03</div>
+            <div className={styles.openingInfo}>
+              <h3>Project Manager</h3>
+              <p>Operations <span aria-hidden="true">·</span> Explore matching opportunities</p>
+            </div>
+            <a
+              className={styles.openingLink}
+              href="https://job10-delta.vercel.app/?audience=jobseeker"
+              aria-label="Explore Project Manager opportunities"
+            >
+              Explore roles <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article className={styles.openingRow}>
+            <div className={styles.openingSymbol} aria-hidden="true">04</div>
+            <div className={styles.openingInfo}>
+              <h3>Data Analyst</h3>
+              <p>Analytics <span aria-hidden="true">·</span> Explore matching opportunities</p>
+            </div>
+            <a
+              className={styles.openingLink}
+              href="https://job10-delta.vercel.app/?audience=jobseeker"
+              aria-label="Explore Data Analyst opportunities"
+            >
+              Explore roles <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+        <div className={styles.openingsBottom}>
+          <span className={styles.openingsNote}>Example roles · Live opportunities are available on Job10.</span>
+          <a className={`${styles.btn} ${styles.btnPrimary} ${styles.openingsCta}`} href="https://job10-delta.vercel.app/?audience=jobseeker">
+            View More Openings <span className={styles.btnArrow} aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
