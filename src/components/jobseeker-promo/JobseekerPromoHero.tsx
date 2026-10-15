@@ -17,19 +17,18 @@ export const JobseekerPromoHero: React.FC = () => {
                   <path d="M7 2v11h3v9l7-12h-4l4-8z" />
                 </svg>
               </span>
-              Talent Matches Faster
+              AI-POWERED JOB MATCHING
             </div>
 
             <h1 className={styles.heroHeadline}>
               Get an interview<br />
-              within{' '}
-              <span className={styles.highlight}>
-                <span className={styles.highlightUnderline}>10</span> minutes!
+              <span style={{ whiteSpace: 'nowrap' }}>
+                in <span className={styles.highlight}>10 minutes.</span>
               </span>
             </h1>
 
             <p className={styles.heroSubhead}>
-              Skip application black holes. Job10 connects you directly with top verified companies through intelligent AI skill matching &mdash; so you can take the next step in your career in just 10 minutes.
+              Skip the endless applications. Job10 matches your skills and experience with opportunities at verified companies, helping you get noticed by the right employers faster.
             </p>
 
             <div className={styles.heroActions}>
@@ -38,15 +37,8 @@ export const JobseekerPromoHero: React.FC = () => {
                 className={`${styles.btn} ${styles.btnPrimary}`}
                 id="hero-primary-cta"
               >
-                <span>Explore Jobs Now</span>
+                <span>Explore Jobs</span>
                 <span className={styles.btnArrow}>&rarr;</span>
-              </a>
-              <a
-                href="#benefits"
-                className={`${styles.btn} ${styles.btnOutline}`}
-                id="hero-secondary-cta"
-              >
-                How It Works
               </a>
             </div>
 
@@ -55,38 +47,38 @@ export const JobseekerPromoHero: React.FC = () => {
                 <Image
                   src="/images/explore-man.jpg"
                   alt="Candidate"
-                  width={32}
-                  height={32}
+                  width={38}
+                  height={38}
                   className={styles.proofAvatar}
                 />
                 <Image
                   src="/images/explore-woman.jpg"
                   alt="Candidate"
-                  width={32}
-                  height={32}
+                  width={38}
+                  height={38}
                   className={styles.proofAvatar}
                 />
                 <Image
                   src="/images/hero-woman.jpg"
                   alt="Candidate"
-                  width={32}
-                  height={32}
+                  width={38}
+                  height={38}
                   className={styles.proofAvatar}
                 />
               </div>
               <div className={styles.proofText}>
-                Matched <strong>15,000+ candidates</strong> with top tier tech teams &middot; ★ 4.9/5
+                Matched <strong>15,000+ candidates</strong> with<br />top tier tech teams &middot; ★ 4.9/5
               </div>
             </div>
           </div>
 
-          {/* Right Column: Hero Image with Soft Seamless Fade */}
+          {/* Right Column: Professional Woman with Seamless Radial/Horizontal Fade */}
           <div className={styles.heroMediaWrap}>
             <Image
               src="/images/hero-woman-asset.jpg"
               alt="Professional woman discovering career opportunities"
-              width={480}
-              height={440}
+              width={500}
+              height={460}
               priority
               className={styles.heroMediaImg}
               id="hero-faded-image"
