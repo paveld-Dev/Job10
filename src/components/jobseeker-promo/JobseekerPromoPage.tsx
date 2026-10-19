@@ -10,15 +10,15 @@ import { JobseekerPromoFooter } from './JobseekerPromoFooter';
 
 export const JobseekerPromoPage: React.FC = () => {
   return (
-    <div className="min-h-screen w-full bg-[#f8fafc] text-[#0b1a3c] font-sans text-lg leading-[1.6] antialiased overflow-x-hidden">
+    <div className="job10-campaign-wrapper min-h-screen w-full bg-[#f8fafc] text-[#0b1a3c]">
       {/* Section 01: Header */}
       <JobseekerPromoHeader />
 
       <main>
-        {/* Section 02: Hero with Live Content & Visual */}
+        {/* Section 02: Hero */}
         <JobseekerPromoHero />
 
-        {/* Section 03: Why Job10 (3 Value Highlights) */}
+        {/* Section 03: Why Job10 (3 Highlights) */}
         <JobseekerPromoHighlights />
 
         {/* Section 04: Popular Job Openings */}

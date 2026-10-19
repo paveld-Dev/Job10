@@ -60,10 +60,9 @@
 section > .job10-section-container,
 section > .container-fluid,
 section > .job10-container-fluid,
-section > .container,
 section > .job10-container,
 .job10-footer > .container-fluid,
-.job10-footer > .container {
+.job10-footer > .job10-container {
   width: 100% !important;
   max-width: 1280px !important;
   margin-left: auto !important;
