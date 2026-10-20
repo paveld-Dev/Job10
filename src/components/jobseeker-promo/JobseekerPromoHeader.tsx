@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from './jobseekerPromo.module.css';
 
 export const JobseekerPromoHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,37 +15,29 @@ export const JobseekerPromoHeader: React.FC = () => {
   }, []);
 
   return (
-    <header className={`${styles.siteHeader} ${isScrolled ? styles.siteHeaderScrolled : ''}`} id="site-header">
-      <div className={styles.container}>
-        <div className={styles.headerInner}>
-          <div className={styles.headerLeft}>
-            <a href="#" className={styles.headerLogo} aria-label="Job10 Home">
+    <header className={`site-header ${isScrolled ? 'scrolled' : ''}`} id="site-header">
+      <div className="container">
+        <div className="header-inner">
+          <div className="header-left">
+            <a href="#" className="header-logo" aria-label="Job10 Home">
               <Image
                 src="/images/job10-logo.png"
                 alt="Job10"
-                width={132}
-                height={36}
+                width={170}
+                height={60}
                 priority
-                style={{ width: '132px', height: 'auto', display: 'block' }}
               />
             </a>
           </div>
-          <nav aria-label="Main Navigation" className={styles.headerCenter}>
-            <ul className={styles.navLinks}>
-              <li><a href="#benefits" className={styles.navLink}>How It Works</a></li>
-              <li><a href="#jobseekers" className={styles.navLink}>For Jobseekers</a></li>
-              <li><a href="#jobseekers" className={styles.navLink}>Browse Jobs</a></li>
-            </ul>
-          </nav>
-          <div className={styles.headerRight}>
+          <div className="header-right">
             <a
               href="https://job10-delta.vercel.app/?audience=jobseeker"
-              className={`${styles.btn} ${styles.btnPrimary}`}
+              className="btn btn-primary"
               style={{ height: '50px', padding: '0 28px', fontSize: '18px' }}
               id="header-cta-btn"
             >
-              <span>Explore Jobs Now</span>
-              <span className={styles.btnArrow}>&rarr;</span>
+              <span>Explore Jobs</span>
+              <span className="btn-arrow">&rarr;</span>
             </a>
           </div>
         </div>
